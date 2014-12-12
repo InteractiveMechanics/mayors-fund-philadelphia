@@ -1,0 +1,9 @@
+header {
+  background-color: #08C; }
+  header .navbar {
+    background: none;
+    border: none; }
+    header .navbar .navbar-nav li > a {
+      color: white; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,14 @@
+header {
+	background-color: $blue;
+
+	.navbar {
+		background: none;
+		border: none;
+
+		.navbar-nav {
+			li > a {
+				color: white;
+			}
+		}
+	}
+}
