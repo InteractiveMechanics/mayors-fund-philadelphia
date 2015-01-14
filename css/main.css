@@ -19,11 +19,30 @@ header {
     margin-right: 25px;
     margin-left: 20px; }
 
+.profile h1 {
+  font-size: 48px;
+  position: initial; }
+  .profile h1 small {
+    text-transform: uppercase;
+    font-style: bold;
+    font-size: 20px;
+    margin-bottom: 40px; }
+  .profile h1 blockquote {
+    background-color: none;
+    border-left: none; }
+    .profile h1 blockquote footer {
+      background-color: red; }
+
 h1 {
   font-size: 48px;
   position: absolute;
   top: 175px;
   width: 80%; }
+  h1 small {
+    text-transform: uppercase;
+    font-style: bold;
+    font-size: 20px;
+    margin-bottom: 40px; }
 
 .firsthing {
   background-color: #d2d2d2;
@@ -75,6 +94,10 @@ h1 {
   .priorities .priorityIcon {
     height: 50px;
     width: 50px; }
+
+.history {
+  background-color: #e1e1e1;
+  margin-top: 20px; }
 
 footer {
   padding-top: 50px;
