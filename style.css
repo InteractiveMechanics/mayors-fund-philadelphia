@@ -1,0 +1,13 @@
+/*   
+Theme Name: The Mayor's Fund for Philadelphia
+Theme URI: http://www.mayorsfundphila.org
+Description: The WordPress theme for The Mayor's Fund for Philadelphia, created in 2015 by Interactive Mechanics.
+Author: Interactive Mechanics
+Author URI: http://www.interactivemechanics.com
+Version: 1.0
+*/
+
+@import url('css/vendor/bootstrap.min.css');
+@import url('css/vendor/slick.css');
+@import url('css/main.css');
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
