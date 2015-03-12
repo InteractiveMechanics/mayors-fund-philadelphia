@@ -17,7 +17,7 @@ h1 {
 }
 
 .hero {
-	background-color: #d2d2d2;
+	background-color: #dddddd;
 	height: 600px;
 	padding-left: 75px;
 }
@@ -87,6 +87,43 @@ h1 {
 .history {
 	background-color: #e1e1e1;
 	margin-top: 20px;
+}
+
+.news_item {
+	background-color: #dddddd;
+	margin: 20px;
+	padding-bottom: 10px;
+	h5 {
+		padding-top: 20px;
+		margin: 0 0 5px 20px;
+	}
+	h4 {
+		margin: 5px 0 0 20px;
+	}
+	p, {
+		margin: 20px;
+	}
+
+	a {
+		margin-left: 5px;
+	}
+	img {
+		margin: 0 0 10px 10px;
+		width: 144px;
+		float: right;
+	}
+}
+
+.tweet-wrapper {
+	background-color: #dddddd;
+	margin: 10px;
+	padding: 15px; 
+}
+
+.twitter_feed {
+	a {
+		float: right;
+	}
 }
 
 footer {
