@@ -1,36 +1,93 @@
 header {
-	background-color: $blue;
+	background-color: $header_background;
 
 	.navbar {
 		background: none;
 		border: none;
+		font-family: "Merriweather", Georgia, serif;
+		font-weight: 300;
 
 		.navbar-nav {
-			li > a {
-				color: white;
+			.open > a {
+				background-color: transparent;
 			}
+			.open >a:hover {
+				background-color: transparent;
+			}
+			.open >a:focus {
+				background-color: transparent;
+			}
+			li > a {
+				color: black;
+			}
+			li >a:hover {
+				color: #035A96;
+				position: relative;
+				&:after {
+					content: "";
+					border-bottom: 2px solid #035A96;
+					position: absolute;
+					width: 40px;
+					left: 50%;
+					margin-left: -20px;
+					bottom: 7px;
+				}
+			}
+
 		}
+
+		ul li ul li {
+			padding: 10px;
+			text-transform: uppercase;
+			font-family: "Open Sans", Arial, sans-serif;
+			border-bottom: 1px solid #dedede;
+			
+		}
+
+
+		ul.dropdown-menu {
+			padding-bottom: 0;
+		}
+
+		ul.dropdown-menu li a:hover{
+			background: none;
+			position: relative;
+		} 
+
+		ul.dropdown-menu li a:hover:after{
+			content: "";
+			border-bottom: 2px solid #035A96;
+			position: absolute;
+			width: 40px;
+			left: 50%;
+			margin-left: -20px;
+			bottom: 0px;
+		} 
+
 	}
 
 	.aboveNav {
 		float: right;
 		margin-top: 20px;
+		a { 
+			color: #b3b3b3;
+		}
+		:hover {
+			color: #EB5846;
+			text-decoration: none;
+		}
 	}
 
 	.twitter {
 		display: inline;
-		font-size: 10px;
-	}
-
-	.fa.fa-circle.fa-stack-2x {
-		color: black;
+		color: #b3b3b3;
 	}
 
 	.supporter {
-		color: black;
+		color: #b3b3b3;
 		display: inline;
 		margin-right: 25px;
 		margin-left: 20px;
+		text-decoration: none;
 	}
-
 }
