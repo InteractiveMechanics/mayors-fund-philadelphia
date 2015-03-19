@@ -17,6 +17,13 @@ header {
 			.open >a:focus {
 				background-color: transparent;
 			}
+
+			@media screen and (max-width: 768px) {
+				text-align: center;
+				border-bottom: 1px solid #dedede;
+
+			}
+
 			li > a {
 				color: black;
 			}
@@ -41,9 +48,12 @@ header {
 			text-transform: uppercase;
 			font-family: "Open Sans", Arial, sans-serif;
 			border-bottom: 1px solid #dedede;
-			
-		}
 
+			@media screen and (max-width: 768px) {
+				text-align: center;
+
+			}
+		}
 
 		ul.dropdown-menu {
 			padding-bottom: 0;
@@ -90,4 +100,21 @@ header {
 		margin-left: 20px;
 		text-decoration: none;
 	}
+
+
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #035a96;
+	}
+
+	.navbar-toggle .icon-bar {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+	}
+
+	.navbar-default .navbar-toggle {
+		border-color: transparent;
+	}
+
 }
