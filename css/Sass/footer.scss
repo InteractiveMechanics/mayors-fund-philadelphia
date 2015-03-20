@@ -1,0 +1,36 @@
+footer {
+	background-color: #a4b8c4;
+	color: #ffffff;
+	padding-top: 50px;
+	padding-bottom: 35px;
+
+	a {
+		color: #ffffff;
+		&:hover {
+			color: #ffffff;
+		}
+	}
+
+	.input-group-btn {
+		border-left: none;
+	}
+
+	.input-group {
+		padding-bottom: 25px;
+		border-radius: 10px;
+	}
+
+	.footer-org-description {
+		font-family: Merriweather, Georgia, serif;
+		font-size: 14px;
+		margin-right: 40px;
+	}
+
+	.list-inline {
+		font-size: 18px;
+		font-weight: 300;
+	}
+
+
+
+}

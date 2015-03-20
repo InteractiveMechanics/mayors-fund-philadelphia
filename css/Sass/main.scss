@@ -1,7 +1,9 @@
 $blue: #08C;
 $header_background: #ffffff;
+$footer_background: #a4b8c4;
 
 @import "header";
+@import "footer";
 @import "profile";
 
 
@@ -13,6 +15,12 @@ h1 {
 		font-size: 20px;
 		margin-bottom: 40px;
 	}
+}
+
+h4 {
+	font-size: 24px;
+	font-weight: 400;
+	font-family: "Open Sans", Arial, sans-serif;
 }
 
 .hero {
@@ -163,18 +171,7 @@ img {
 article {
 	margin-bottom: 35px;
 }
-}
 
-
-
-footer {
-	padding-top: 50px;
-	padding-bottom: 35px;
-	background-color: #e1e1e1;
-	.input-group {
-		padding-bottom: 25px;
-	}
-	
 }
 
 
