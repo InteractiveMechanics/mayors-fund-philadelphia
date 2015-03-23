@@ -11,10 +11,6 @@ footer {
 		}
 	}
 
-	.input-group-btn {
-		border-left: none;
-	}
-
 	.input-group {
 		padding-bottom: 25px;
 		border-radius: 10px;
@@ -31,6 +27,25 @@ footer {
 		font-weight: 300;
 	}
 
+	small {
+		font-size: 12px;
+	}
+
+	.divider {
+		padding: 0 15px 0 15px;
+	}
+
+	.form-control, .btn.btn-default {
+		border: 1px solid transparent;
+	}
+
+	.col-sm-6 {
+		width: 75%;
+	}
+
+	.fa-long-arrow-right {
+		width: 36px;
+	}
 
 
 }

@@ -56,7 +56,7 @@ header {
 		ul li ul li {
 			padding: 10px;
 			text-transform: uppercase;
-			font-family: "Open Sans", Arial, sans-serif;
+			font-family: "Source Sans", Arial, sans-serif;
 			border-bottom: 1px solid #dedede;
 
 			@media screen and (max-width: 768px) {
@@ -121,7 +121,7 @@ header {
 	}
 
 	.navbar .navbar-nav .visible-xs-block li > a {
-		font-family: "Open Sans", Arial, sans-serif;
+		font-family: "Source Sans", Arial, sans-serif;
 		font-weight: 400;
 		color: #EB5846 !important;
 		&:hover {
@@ -130,10 +130,7 @@ header {
 		}
 	}
 
-	.navbar-default .navbar-toggle .icon-bar {
-		background-color: #035a96;
-	}
-
+	
 	.navbar-toggle .icon-bar {
 		display: inline-block;
 		width: 10px;
@@ -144,10 +141,10 @@ header {
 	.navbar-default .navbar-toggle {
 		border-color: transparent;
 		> .icon-bar {
-			box-shadow: 0 0 8px black;
+			background-color: #035a96;
 		}
 		&.collapsed > .icon-bar{
-			box-shadow: none;
+			background-color: #dedede;
 		}
 	}
 
