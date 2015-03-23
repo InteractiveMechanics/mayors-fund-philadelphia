@@ -76,10 +76,15 @@ body {
 
 	aside {
 		background-color: #fff;
+		padding-bottom: 30px;
 		a {
 			font-size: 14px;
 			font-weight: 700;
 			color: $blue;
+		}
+		img {
+			width: 85%;
+			padding: 25px;
 		}
 	}
 
@@ -95,7 +100,6 @@ body {
 			color: $grey;
 			padding-left: 25px;
 	}
-
 
 	.btn-default {
 		color: $donate;
