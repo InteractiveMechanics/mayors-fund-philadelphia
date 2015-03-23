@@ -1,22 +1,118 @@
 
+body {
+	background-color: #f2f2f2;
+}
+
+
 .profile {
+
+	h5 {
+		color: $blue;
+	}
+
 	h1 {
-		font-size: 48px;
+		font-size: 42px;
+		font-family: Merriweather, Georgia, serif;
+		font-weight: 300;
 		position: initial;
-			small {
-				text-transform: uppercase;
-				font-style: bold;
-				font-size: 20px;
-				margin-bottom: 40px;
-			}
-	blockquote {
-		background-color: none;
+	}
+	
+	h4 {
+		font-weight: 300;
+		color: $grey;
+	}
+
+	blockquote {	
+		background-color: #f2f2f2;
 		border-left: none;
+		text-align: center;
+
+		p {
+		font-size: 18px;
+		font-weight: 300;
+		font-family: Merriweather, Georgia, serif;
+		line-height: 1.5em;
+		}
+
 		footer {
-			background-color: red;
+			background-color: #f2f2f2;
+			font-size: 16px;
+			font-weight: 700;
+			font-family: "Source Sans Pro", Arial, sans-serif;
+			color: #000;
+			padding-top: 0;
+			padding-bottom: 0;
+			text-align: center;
+			text-decoration: none;
+
 		}
 	}
 
+	article {
+		margin-bottom: 70px;
 	}
 
+
+	p {
+		font-weight: 300;
+		padding: 10px 140px 10px 0;
+		margin-left: 20px;
+	}
+
+	img {
+		width: 637px;
+	}
+
+	figcaption {
+		display: block;
+		float: right;
+		margin-right: 15%;
+		font-size: 12px;
+	} 
+
+	figure {
+		margin-bottom: 20px;
+	}
+
+	aside {
+		background-color: #fff;
+		a {
+			font-size: 14px;
+			font-weight: 700;
+			color: $blue;
+		}
+	}
+
+	.profile-aside-border {
+		border-bottom: 1px solid #f2f2f2;
+		margin-bottom: 30px;
+		margin-top: 15px;
+	}
+
+	.profile-aside-heading {
+			font-size: 16px;
+			font-family: Merriweather, Georgia, serif;
+			color: $grey;
+			padding-left: 25px;
+	}
+
+
+	.btn-default {
+		color: $donate;
+		border: 2px solid $donate;
+		margin-bottom: 20px;
+		margin-left: 25px;
+		&:hover {
+			color: #fff;
+			background-color: $donate;
+		}
+	}
+
+	.btn {
+		font-size: 18px;
+		margin-left: 25px
+		;
+		margin-top: 10%;
+		padding: 12px 23px;
+	}
 }

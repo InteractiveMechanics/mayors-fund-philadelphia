@@ -1,6 +1,11 @@
-$blue: #08C;
+$blue: #035A96;
+$grey: #808080;
+$donate: #EB5846;
 $header_background: #ffffff;
 $footer_background: #a4b8c4;
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,700);
 
 @import "header";
 @import "footer";
@@ -18,9 +23,21 @@ h1 {
 }
 
 h4 {
-	font-size: 24px;
+	font-size: 28px;
 	font-weight: 400;
-	font-family: "Open Sans", Arial, sans-serif;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+h5 {
+	font-size: 21px;
+	font-weight: 700;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-size: 16px;
 }
 
 .hero {
