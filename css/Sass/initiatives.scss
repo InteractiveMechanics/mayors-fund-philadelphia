@@ -1,0 +1,99 @@
+
+.initiatives {
+
+	h5 {
+		color: $blue;
+	}
+
+	h1 {
+		font-size: 42px;
+		font-family: Merriweather, Georgia, serif;
+		font-weight: 300;
+		position: initial;
+		margin-bottom: 100px;
+	}
+
+
+	.filter {
+		color: $grey;
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-left: 105px;
+  		margin-top: 40px;
+  		margin-bottom: 0;
+	}
+
+	.priority-area-placeholder {
+		float: right;
+		height: 42px;
+		width: 42px;
+		border-radius: 50%;
+		background-color: $blue;
+		margin: 10px 5px;
+	}
+
+	section {
+		margin-bottom: 30px;
+	}
+
+	.initiative-summary {
+		height: 400px;
+		background-color: #ffffff;
+
+		img {
+			z-index: 0;
+			width: 555px;
+			max-height: 250px;
+
+		}
+
+		h3 {
+			padding-top: 25px;
+			padding-left: 25px;
+			font-weight: 300;
+		}
+
+		p {
+			padding: 0px 25px 10px 25px;
+			font-weight: 300;
+		}
+
+		.priority-area-placeholder {
+			z-index: 1;
+			position: absolute;
+			margin-top: -20px;
+			left: 30px;
+		}
+		.priority-area-placeholder:nth-of-type(2) {
+			left: 90px;
+		}
+
+	}
+
+	.btn-default {
+		color: $blue;
+		border: 2px solid $blue;
+		margin-bottom: 20px;
+		margin-left: 25px;
+		&:hover {
+			color: #fff;
+			background-color: $blue;
+		}
+
+	}
+
+	.btn {
+		margin: 30px 42%;
+		padding: 12px 23px;
+		h4 {
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+
+
+
+
+}
+
