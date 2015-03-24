@@ -10,6 +10,11 @@ $footer_background: #a4b8c4;
 @import "header";
 @import "footer";
 @import "profile";
+@import "initiatives";
+
+body {
+	background-color: #f2f2f2;
+}
 
 
 h1 {
@@ -20,6 +25,12 @@ h1 {
 		font-size: 20px;
 		margin-bottom: 40px;
 	}
+}
+
+h3 {
+	font-size: 24px;
+	font-family: Merriweather, Georgia, serif;
+	font-weight: 700;
 }
 
 h4 {
