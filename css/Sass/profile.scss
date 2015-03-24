@@ -82,16 +82,49 @@ body {
 			font-weight: 700;
 			color: $blue;
 		}
+		p {
+			font-size: 16px;
+			font-weight: 600;
+			color: $blue;
+		}
 		img {
 			width: 85%;
 			padding: 25px;
 		}
+
 	}
+
+	.arrow {
+		position: absolute;
+		top: 230px;
+		height: 40px;
+		width: 40px;
+		background-color: #fff;
+		border-radius: 999px;
+  		text-align: center;
+  		padding: 5px;
+ 		color: grey;
+  		border: 2px solid transparent;
+  		&:hover {
+  			border: 2px solid $blue;
+  			color: $blue;
+  		}
+	}
+
+	.left-arrow {
+		left: 5%;
+		padding-left: 0;
+	}
+
+	.right-arrow {
+		right: 5%;
+		padding-right: 0; 
+	}
+
 
 	.profile-aside-border {
 		border-bottom: 1px solid #f2f2f2;
-		margin-bottom: 30px;
-		margin-top: 15px;
+		margin: 15px -30px 30px -30px;
 	}
 
 	.profile-aside-heading {
