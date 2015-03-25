@@ -17,6 +17,20 @@ header {
 			.open >a:focus {
 				background-color: transparent;
 			}
+
+			@media screen and (max-width: 768px) {
+				text-align: center;
+				//border-bottom: 1px solid #dedede;
+
+			}
+
+			li {
+				@media screen and (max-width: 768px) {
+					margin: 15px;
+					border-bottom: 1px solid #dedede;
+				}
+			}
+
 			li > a {
 				color: black;
 			}
@@ -31,6 +45,9 @@ header {
 					left: 50%;
 					margin-left: -20px;
 					bottom: 7px;
+					@media screen and (max-width: 768px) {
+						display: none;
+					}
 				}
 			}
 
@@ -39,11 +56,14 @@ header {
 		ul li ul li {
 			padding: 10px;
 			text-transform: uppercase;
-			font-family: "Open Sans", Arial, sans-serif;
+			font-family: "Source Sans", Arial, sans-serif;
 			border-bottom: 1px solid #dedede;
-			
-		}
 
+			@media screen and (max-width: 768px) {
+				text-align: center;
+
+			}
+		}
 
 		ul.dropdown-menu {
 			padding-bottom: 0;
@@ -90,4 +110,55 @@ header {
 		margin-left: 20px;
 		text-decoration: none;
 	}
+
+	.fa-angle-down {
+		float: right;
+	}
+
+	.navbar .navbar-nav .visible-xs-block li {
+		padding-bottom: 10px;
+		padding-top: 5px;
+	}
+
+	.navbar .navbar-nav .visible-xs-block li > a {
+		font-family: "Source Sans", Arial, sans-serif;
+		font-weight: 400;
+		color: #EB5846 !important;
+		&:hover {
+			text-decoration: none;
+			color: #C95846 !important;
+		}
+	}
+
+	
+	.navbar-toggle .icon-bar {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+	}
+
+	.navbar-default .navbar-toggle {
+		border-color: transparent;
+		> .icon-bar {
+			background-color: #035a96;
+		}
+		&.collapsed > .icon-bar{
+			background-color: #dedede;
+		}
+	}
+
+	button {
+			@media screen and (max-width: 768px) {
+			color: transparent !important;
+			background-color: transparent !important;
+			background-image: transparent !important;	
+			&:hover{
+			color: transparent !important;
+			background-color: transparent !important;
+			background-image: transparent !important;
+		}
+		}
+}
+
 }

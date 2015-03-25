@@ -1,8 +1,20 @@
-$blue: #08C;
+$blue: #035A96;
+$grey: #808080;
+$donate: #EB5846;
 $header_background: #ffffff;
+$footer_background: #a4b8c4;
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,700);
 
 @import "header";
+@import "footer";
 @import "profile";
+@import "initiatives";
+
+body {
+	background-color: #f2f2f2;
+}
 
 
 h1 {
@@ -13,6 +25,30 @@ h1 {
 		font-size: 20px;
 		margin-bottom: 40px;
 	}
+}
+
+h3 {
+	font-size: 24px;
+	font-family: Merriweather, Georgia, serif;
+	font-weight: 700;
+}
+
+h4 {
+	font-size: 24px;
+	font-weight: 400;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+h5 {
+	font-size: 21px;
+	font-weight: 700;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-size: 16px;
 }
 
 .hero {
@@ -163,18 +199,7 @@ img {
 article {
 	margin-bottom: 35px;
 }
-}
 
-
-
-footer {
-	padding-top: 50px;
-	padding-bottom: 35px;
-	background-color: #e1e1e1;
-	.input-group {
-		padding-bottom: 25px;
-	}
-	
 }
 
 
