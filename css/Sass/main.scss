@@ -11,6 +11,7 @@ $footer_background: #a4b8c4;
 @import "footer";
 @import "profile";
 @import "initiatives";
+@import "about";
 
 body {
 	background-color: #f2f2f2;
@@ -49,6 +50,10 @@ h5 {
 p {
 	font-family: "Source Sans Pro", Arial, sans-serif;
 	font-size: 16px;
+}
+
+.page-header {
+	border-bottom: 1px solid transparent;
 }
 
 .hero {
