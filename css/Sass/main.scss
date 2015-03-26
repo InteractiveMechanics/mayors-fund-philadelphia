@@ -1,6 +1,7 @@
 $blue: #035A96;
 $grey: #808080;
 $donate: #EB5846;
+$secondary: #B3B3B3;
 $green_accent: #00A258;
 $header_background: #ffffff;
 $footer_background: #a4b8c4;
@@ -143,42 +144,6 @@ p {
 
 }
 
-.news_item {
-	background-color: #dddddd;
-	margin: 20px;
-	padding-bottom: 10px;
-	h5 {
-		padding-top: 20px;
-		margin: 0 0 5px 20px;
-	}
-	h4 {
-		margin: 5px 0 0 20px;
-	}
-	p, {
-		margin: 20px;
-	}
-
-	a {
-		margin-left: 5px;
-	}
-	img {
-		margin: 0 0 10px 10px;
-		width: 144px;
-		float: right;
-	}
-}
-
-.tweet-wrapper {
-	background-color: #dddddd;
-	margin: 10px;
-	padding: 15px; 
-}
-
-.twitter_feed {
-	a {
-		float: right;
-	}
-}
 
 .news_article {
 	h1 {
