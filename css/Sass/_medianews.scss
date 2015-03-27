@@ -1,0 +1,88 @@
+.medianews {
+	h1 {
+		font-size: 42px;
+		font-family: Merriweather, Georgia, serif;
+		font-weight: 300;
+		position: initial;
+	}
+
+	h3 {
+		font-weight: 400;
+	}
+
+	.svg-placeholder {
+		display: inline-block;
+		background-color: $blue;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+	}
+
+	.news_item {
+		background-color: #ffffff;
+		margin: 20px;
+		padding-bottom: 10px;
+		h5 {
+			font-size: 16px;
+			color: $grey;
+			padding-top: 20px;
+			margin: 0 0 5px 20px;
+		}
+		h4 {
+			margin: 5px 0 0 20px;
+		}
+		p, {
+			margin: 20px;
+		}
+
+		a {
+			margin-left: 5px;
+		}
+		img {
+			margin: 0 0 10px 10px;
+			width: 144px;
+			float: right;
+		}
+	}
+
+	.tweet-wrapper {
+	background-color: #ffffff;
+	margin: 10px;
+	padding: 15px; 
+}
+
+.twitter_feed {
+	a {
+		float: right;
+		font-family: "Source Sans Pro", Arial, sans-serif;
+		font-size: 16px;
+	}
+}
+
+.pagination {
+	margin-bottom: 70px;
+	margin-left: 25%;
+
+	
+}
+
+.pagination>li>a {
+	margin-left: 5px;
+	border: 1px solid transparent;
+	color: #000000;
+	&:hover {
+		background-color: $secondary;
+		color: white;
+	}
+}
+
+.pagination>.disabled>a {
+	background-color: white;
+	color: $secondary;
+
+}
+
+
+
+	
+}
