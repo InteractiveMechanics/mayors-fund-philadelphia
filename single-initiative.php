@@ -19,9 +19,7 @@
         			</article>
         		</div>
     			<aside class="col-sm-3 col-sm-offset-1">
-                    <?php if( get_field('url') ): ?>
-                        <a href="<?php the_field('url'); ?>" class="btn btn-primary">Support this project</a>
-                    <?php endif; ?>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Support this project</a>
                     <?php if( have_rows('video') ): ?>
                         <div class="sidebar-section">
                             <?php while ( have_rows('video') ): the_row(); ?>
@@ -40,7 +38,7 @@
                                 <h3>Priority Areas</h3>
                                 <ul>
                                 	<?php foreach ( $terms as $term ): ?>
-                                		<li><?php echo $term->slug; ?></li>
+                                		<li><?php include('svg/icon_' . $term->slug . '.php'); ?> <?php print $term->name; ?></li>
                                     <?php endforeach; ?>
                                 </ul>
                             </div>

@@ -49,13 +49,11 @@
 <header>
     <div class="container">
         <div class="aboveNav">
-            <div class="twitter">
-                <span class="fa-stack fa-lg">
-                    <a href="https://twitter.com/mayorsfundphila"><i class="fa fa-circle fa-stack-2x"></i> Follow us</a>
-                </span>
+            <div class="twitter hidden-xs">
+                <a href="https://twitter.com/mayorsfundphila"><i class="fa fa-twitter"></i> Follow us</a>
             </div>
-            <div class="supporter">
-                <a href="<?php echo get_page_link(50); ?>"><i class="fa fa-heart"></i> Become a Supporter</a>
+            <div class="supporter hidden-xs">
+                <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-heart"></i> Become a supporter!</a>
             </div>
         </div>
     </div>
@@ -70,7 +68,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php print get_bloginfo('url'); ?>">Brand</a>
+                    <a class="navbar-brand" href="<?php print get_bloginfo('url'); ?>"><?php include('svg/logo_header.php'); ?></a>
                 </div>
 
                 <?php wp_nav_menu( 
