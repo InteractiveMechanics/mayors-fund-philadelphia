@@ -46,53 +46,44 @@
     <?php wp_head(); ?>
 </head>
 <body>
-  <header>
+<header>
     <div class="container">
-      <div class="aboveNav">
-        <div class="twitter">
-          <span class="fa-stack fa-lg">
-            <a href="https://twitter.com/mayorsfundphila"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></a>
-          </span>
+        <div class="aboveNav">
+            <div class="twitter">
+                <span class="fa-stack fa-lg">
+                    <a href="https://twitter.com/mayorsfundphila"><i class="fa fa-circle fa-stack-2x"></i> Follow us</a>
+                </span>
+            </div>
+            <div class="supporter">
+                <a href="<?php echo get_page_link(50); ?>"><i class="fa fa-heart"></i> Become a Supporter</a>
+            </div>
         </div>
-        <div class="supporter">
-          <i class="fa fa-heart"></i> Become a supporter!
-        </div>
-      </div>
     </div>
     <div class="container">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brand</a>
-          </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="<?php print get_bloginfo('url'); ?>">Brand</a>
+                </div>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About the Fund <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">About the Fund</a></li>
-                  <li><a href="#">Board &amp; Staff</a></li>
-                  <li><a href="#">Annual Report</a></li>
-                  <li><a href="#">Staff Resources</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Our Initiatives</a></li>
-              <li><a href="#">Media</a></li>
-              <li><a href="#">Get Involved</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+                <?php wp_nav_menu( 
+                    array( 
+                        'theme_location'    => 'primary', 
+                        'container_class'   => 'collapse navbar-collapse',
+                        'container_id'      => 'bs-example-navbar-collapse-1',
+                        'menu_class'        => 'nav navbar-nav navbar-right',
+                        'walker'            => new wp_bootstrap_navwalker()
+                    )
+                ); ?>
+            </div>
+        </nav>
     </div>
-  </header>
-  <main>
+</header>
+<main>
