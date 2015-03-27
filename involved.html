@@ -83,50 +83,50 @@
           <h1>Ways to Get Involved</h1>
           <h4>The Mayor’s Fund provides a variety of ways to support our initiatives.</h4>
         </div>
-      <div class="col-sm-4">
-        <section class="get-involved-block">
-          <div class="svg-placeholder"></div>
-          <h4>Make a Donation</h4>
-          <p>Every donation counts. We’re committed to improving the lives of Philadelphians, and we’re very grateful for your support!</p>
-          <a href=""><h5>Donate now &raquo;</h5></a>
-        </section>
-      </div>
-       <div class="col-sm-4">
-        <section class="get-involved-block">
+        <div class="col-sm-4">
+          <section class="get-involved-block">
             <div class="svg-placeholder"></div>
-          <h4>Volunteer Your Time</h4>
-          <p>In 2011, more than 1,500 mentors were trained to work with more than 2,000 students making a big difference in each of their lives.</p>
-          <a href="http://volunteer.phila.gov"><h5>Become a Volunteer &raquo;<h5></a>
-        </section>
-      </div>
-       <div class="col-sm-4">
-        <section class="get-involved-block">
+            <h4>Make a Donation</h4>
+            <p>Every donation counts. We’re committed to improving the lives of Philadelphians, and we’re very grateful for your support!</p>
+            <a href="" data-toggle="modal" data-target="#myModal"><h5>Donate now &raquo;</h5></a>
+          </section>
+        </div>
+        <div class="col-sm-4">
+          <section class="get-involved-block">
             <div class="svg-placeholder"></div>
-          <h4>Become a Sponsor</h4>
-          <p>Our sponsorship partners are leaders in their communities and help us enact significant change through financial contributions.</p>
-          <a href=""><h5>Contact us now &raquo;</h5></a>
-        </section>
-      </div>
+            <h4>Volunteer Your Time</h4>
+            <p>In 2011, more than 1,500 mentors were trained to work with more than 2,000 students making a big difference in each of their lives.</p>
+            <a href="http://volunteer.phila.gov"><h5>Become a Volunteer &raquo;<h5></a>
+          </section>
+        </div>
+        <div class="col-sm-4">
+          <section class="get-involved-block">
+            <div class="svg-placeholder"></div>
+            <h4>Become a Sponsor</h4>
+            <p>Our sponsorship partners are leaders in their communities and help us enact significant change through financial contributions.</p>
+            <a href=""><h5>Contact us now &raquo;</h5></a>
+          </section>
+        </div>
         <div class="col-sm-8">
           <article>
-          <h3>A great investment in Philadelphia</h3>
-          <p>Did you know that 95% of your contribution goes directly to the programs and services that improve the quality of life for all Philadelphians? That makes your contribution to the Mayor’s Fund for Philadelphia a great philanthropic investment in the people, places, and programs that make Philadelphia great.</p>
-          <p>Thank you for your support!</p>
-          <p class="tax-deductible-statement"><em>The Mayor's Fund for Philadelphia is a 501(c)(3) public charity; All donations are tax-deductible to the extent permitted by law.</em></p>
-        </article>
+            <h3>A great investment in Philadelphia</h3>
+            <p>Did you know that 95% of your contribution goes directly to the programs and services that improve the quality of life for all Philadelphians? That makes your contribution to the Mayor’s Fund for Philadelphia a great philanthropic investment in the people, places, and programs that make Philadelphia great.</p>
+            <p>Thank you for your support!</p>
+            <p class="tax-deductible-statement"><em>The Mayor's Fund for Philadelphia is a 501(c)(3) public charity; All donations are tax-deductible to the extent permitted by law.</em></p>
+          </article>
         </div>
         <div class="col-sm-4">
           <aside>
             <p>If you would like to make your contribution by mail, please make check payable to:</p>
             <p>
-            <div class="vcard">
-              <div class="org">The Fund for Philadelphia</div>
-              <div class="street-address">City Hall Room 708</div>
-              <span class="locality">Philadelphia</span>,
-              <abbr class="region" title="Pennsylvania">PA</abbr> 
-              <span class="postal-code">19107</span>
-            </div>
-            <p>Please note on the check if you would like your donation to be applied to a specific program/project (for example, Graduation Coaches).</p>
+              <div class="vcard">
+                <div class="org">The Fund for Philadelphia</div>
+                <div class="street-address">City Hall Room 708</div>
+                <span class="locality">Philadelphia</span>,
+                <abbr class="region" title="Pennsylvania">PA</abbr> 
+                <span class="postal-code">19107</span>
+              </div>
+              <p>Please note on the check if you would like your donation to be applied to a specific program/project (for example, Graduation Coaches).</p>
             </div>
           </aside>
         </div>
@@ -176,14 +176,62 @@
         </div>
       </div>
     </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Yes! I'd like to make a donation!</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="donation-form">
+              <div class="form-group">
+                <p>Thank you for choosing to make a contribution to the Mayor's Fund for Philadelphia.  You can designate your contribution for a specific progam, or your contribution go toward the Fund's most urgent need.</p>
+                <p>Thank you for your support!</p>
+                <label for="program-list">Program</label> 
+                <select name="Programs" id="program-list">
+                  Program
+                  <option value="Most Urgent Need">Most Urgent Need</option>
+                  <option value="Dilworth Award">Dilworth Award</option>
+                  <option value="Graduation Coaches">Graduation Coaches</option>
+                  <option value="Better Bike Share Parntership">Better Bike Share Partnership</option>
+                  <option value "Mayor's Summer Job Challenge">Mayor's Summer Job Challenge</option>
+                </select>
+              </div>
+              <div class="form group">
+                <div class="input-group">
+                  <label>Donation Amount</label>
+                  <span class="input-group-addon">$</span>
+                  <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Go Back</button>
+          <button type="button" class="btn btn-primary">Complete My Donation</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-  </body>
 
 
-  </html>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/vendor/bootstrap.min.js"></script>
+
+
+
+</body>
+
+
+</html>
