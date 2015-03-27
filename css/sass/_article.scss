@@ -1,0 +1,72 @@
+.news_article {
+	
+	h5 {
+		color: $blue;
+	}
+
+	h1 {
+		font-size: 42px;
+		font-family: Merriweather, Georgia, serif;
+		font-weight: 300;
+		position: initial;
+	}
+	
+	h4 {
+		font-weight: 300;
+		color: $grey;
+	}
+
+	img {
+		width: 600px;
+	}
+
+	figcaption {
+		display: block;
+		float: right;
+		margin-right: 20%;
+		font-size: 12px;
+	} 
+
+	figure {
+		margin-bottom: 20px;
+	}
+
+
+	article {
+		margin-bottom: 70px;
+		h4 {
+			margin-top: 20px;
+		}
+		.lead {
+			margin-top: 60px;
+		}
+		p {
+			margin-right: 100px;
+		}
+	}
+
+	.learn-more {
+		background-color: #fff;
+		text-align: center;
+		padding: 32px 50px;
+		h5 {
+			color: $green_accent;
+			&:after {
+				content: "";
+				border-bottom: 2px solid $green_accent;
+				position: absolute;
+				width: 40px;
+				left: 50%;
+				margin-left: -20px;
+				top: 75px;
+			}
+		}
+		p {
+			margin-top: 30px;
+			font-weight: 300;
+			font-size: 20px;
+
+		}
+	}
+
+}

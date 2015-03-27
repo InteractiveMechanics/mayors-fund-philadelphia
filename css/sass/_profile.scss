@@ -1,0 +1,150 @@
+
+.profile {
+
+	h5 {
+		color: $blue;
+	}
+
+	h1 {
+		font-size: 42px;
+		font-family: Merriweather, Georgia, serif;
+		font-weight: 300;
+		position: initial;
+	}
+	
+	h4 {
+		font-weight: 300;
+		color: $grey;
+	}
+
+	blockquote {	
+		background-color: #f2f2f2;
+		border-left: none;
+		text-align: center;
+
+		p {
+		font-size: 18px;
+		font-weight: 300;
+		font-family: Merriweather, Georgia, serif;
+		line-height: 1.5em;
+		}
+
+		footer {
+			background-color: #f2f2f2;
+			font-size: 16px;
+			font-weight: 700;
+			font-family: "Source Sans Pro", Arial, sans-serif;
+			color: #000;
+			padding-top: 0;
+			padding-bottom: 0;
+			text-align: center;
+			text-decoration: none;
+
+		}
+	}
+
+	article {
+		margin-bottom: 70px;
+	}
+
+
+	p {
+		font-weight: 300;
+		padding: 10px 140px 10px 0;
+		margin-left: 20px;
+	}
+
+	img {
+		width: 637px;
+	}
+
+	figcaption {
+		display: block;
+		float: right;
+		margin-right: 15%;
+		font-size: 12px;
+	} 
+
+	figure {
+		margin-bottom: 20px;
+	}
+
+	aside {
+		background-color: #fff;
+		padding-bottom: 30px;
+		a {
+			font-size: 14px;
+			font-weight: 700;
+			color: $blue;
+		}
+		p {
+			font-size: 16px;
+			font-weight: 600;
+			color: $blue;
+		}
+		img {
+			width: 85%;
+			padding: 25px;
+		}
+
+	}
+
+	.arrow {
+		position: absolute;
+		top: 230px;
+		height: 40px;
+		width: 40px;
+		background-color: #fff;
+		border-radius: 999px;
+  		text-align: center;
+  		padding: 5px;
+ 		color: grey;
+  		border: 2px solid transparent;
+  		&:hover {
+  			border: 2px solid $blue;
+  			color: $blue;
+  		}
+	}
+
+	.left-arrow {
+		left: 5%;
+		padding-left: 0;
+	}
+
+	.right-arrow {
+		right: 5%;
+		padding-right: 0; 
+	}
+
+
+	.profile-aside-border {
+		border-bottom: 1px solid #f2f2f2;
+		margin: 15px -30px 30px -30px;
+	}
+
+	.profile-aside-heading {
+			font-size: 16px;
+			font-family: Merriweather, Georgia, serif;
+			color: $grey;
+			padding-left: 25px;
+	}
+
+	.btn-default {
+		color: $donate;
+		border: 2px solid $donate;
+		margin-bottom: 20px;
+		margin-left: 25px;
+		&:hover {
+			color: #fff;
+			background-color: $donate;
+		}
+	}
+
+	.btn {
+		font-size: 18px;
+		margin-left: 25px
+		;
+		margin-top: 10%;
+		padding: 12px 23px;
+	}
+}
