@@ -1,0 +1,105 @@
+footer {
+	background-color: #a4b8c4;
+	color: #ffffff;
+	padding: 50px 0;
+
+	a {
+		color: white;
+        opacity: 1;
+        transition: $fast-trans;
+
+		&:hover {
+            color: white;
+			opacity: 0.65;
+		}
+	}
+    h4 {
+        font-size: 24px;
+        font-weight: 300;
+        margin: 0 0 10px;
+    }
+    p {
+        font-family: $primary-font;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+    small {
+        font-size: 12px;
+        font-weight: 300;
+
+        a { 
+            margin-left: 10px; 
+            padding-left: 10px; 
+            font-weight: 500; 
+            text-decoration: underline; 
+            border-left: 2px solid rgba(255,255,255,0.35);
+
+            &:hover { text-decoration: underline; }
+        }
+    }
+
+    .brand {
+        max-width: 220px;
+        display: block;
+        margin-bottom: 10px;
+
+        svg { width: 100%; }
+    }
+	.input-group {
+		margin-bottom: 20px;
+        width: 100%;
+        position: relative;
+        max-width: 420px;
+
+        .form-control, 
+        .btn.btn-default {
+    		border: 1px solid transparent;
+            height: 48px;
+    	}
+        .form-control {
+            width: 100%;
+            border-radius: 6px !important;
+            border: 1px solid darken(#DBE3E7, 15%);
+            background: #DBE3E7;
+            transition: $slow-trans;
+            font-size: 18px;
+            font-weight: 300;
+            padding: 2px 16px 4px;
+
+            &:focus {
+                background: white;
+            }
+        }
+        .btn.btn-default {
+            background: transparent;
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            z-index: 2;
+
+            svg { width: 40px; }
+
+            &:hover {
+                svg line,
+                svg polyline { stroke: $blue; }
+            }
+        }
+	}
+	.list-inline {
+		font-size: 18px;
+		font-weight: 300;
+
+        a {
+            padding: 0 8px;
+
+            &:first-of-type {
+                padding-left: 0;
+            }
+        }
+	}
+
+	.divider {
+		padding: 0 15px 0 15px;
+	}
+}

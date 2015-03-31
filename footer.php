@@ -3,17 +3,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <a href="<?php print get_bloginfo('url'); ?>"><?php include('svg/logo_footer.php'); ?></a>
+                    <a href="<?php print get_bloginfo('url'); ?>" class="brand"><?php include('svg/logo_footer.php'); ?></a>
                     <p>The Mayor's Fund for Philadelphia is an independent nonprofit that seeks to improve the quality of life for all Philadelphians.</p>
                 </div>
-                <div class="col-sm-8">
-                    <p>Sign up for our newsletter</p>
+                <div class="visible-xs divider"></div>
+                <div class="col-sm-8 col-md-6 col-md-offset-1">
+                    <h4>Sign up for our newsletter</h4>
                     <div class="row">
-                        <div class="col-sm-6">  
-                            <div class="input-group">
-                                <input type="text" class="form-control">
-                                <span class="input-group-btn"><button class="btn btn-default" type="button">Submit</button></span>
-                            </div>
+                        <div class="col-sm-12">
+                            <form action="//mayorsfundphila.us10.list-manage.com/subscribe/post?u=234cb32d956bc94c9c8585fbb&amp;id=aa77320e29" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="johnsmith@me.com" name="EMAIL" id="mce-EMAIL">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit" name="subscribe" id="mc-embedded-subscribe"><?php include('svg/icon_arrow.php'); ?></button>
+                                    </span>
+                                </div>
+                                <div style="position: absolute; left: -5000px;"><input type="text" name="b_234cb32d956bc94c9c8585fbb_aa77320e29" tabindex="-1" value=""></div>
+                            </form>
                         </div>
                     </div>
                     <?php wp_nav_menu( 
@@ -23,51 +29,51 @@
                             'menu_class'        => 'list-inline'
                         )
                     ); ?>
-                    <small>Copyright &copy; <?php print date('Y'); ?> The Mayor's Fund for Philadelphia. <a href="#" class="hidden">Copyright information</a></small>
+                    <small>
+                        Copyright &copy; <?php print date('Y'); ?> The Mayor's Fund for Philadelphia.
+                        <a href="#" class="hidden-xs">Copyright information</a></small>
                 </div>
             </div>
         </div>
     </footer>
     
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Yes! I'd like to make a donation!</h4>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="donation-form">
-              <div class="form-group">
-                <p>Thank you for choosing to make a contribution to the Mayor's Fund for Philadelphia.  You can designate your contribution for a specific program, or your contribution go toward the Fund's most urgent need.</p>
-                <p>Thank you for your support!</p>
-                <label for="program-list">Program</label> 
-                <select name="Programs" id="program-list">
-                  Program
-                  <option value="all">Most Urgent Need</option>
-                  <option value="the-dilworth-award">Dilworth Award</option>
-                  <option value="Graduation Coaches">Graduation Coaches</option>
-                  <option value="Better Bike Share Parntership">Better Bike Share Partnership</option>
-                  <option value "Mayor's Summer Job Challenge">Mayor's Summer Job Challenge</option>
-                </select>
-              </div>
-              <div class="form group">
-                <div class="input-group">
-                  <label>Donation Amount</label>
-                  <span class="input-group-addon">$</span>
-                  <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+    <div class="modal fade" id="support" tabindex="-1" role="dialog" aria-labelledby="SupportModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Yes! I'd like to make a donation!</h4>
                 </div>
-              </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="donation-form">
+                            <div class="form-group">
+                                <p>Thank you for choosing to make a contribution to the Mayor's Fund for Philadelphia.  You can designate your contribution for a specific program, or your contribution go toward the Fund's most urgent need.</p>
+                                <label for="program-list">Program</label> 
+                                <select name="Programs" id="program-list">
+                                    <option value="all">Most Urgent Need</option>
+                                    <option value="the-dilworth-award">Dilworth Award</option>
+                                    <option value="Graduation Coaches">Graduation Coaches</option>
+                                    <option value="Better Bike Share Parntership">Better Bike Share Partnership</option>
+                                    <option value "Mayor's Summer Job Challenge">Mayor's Summer Job Challenge</option>
+                                </select>
+                            </div>
+                            <div class="form group">
+                                <div class="input-group">
+                                    <label>Donation Amount</label>
+                                    <span class="input-group-addon">$</span>
+                                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Go Back</button>
+                    <button type="button" class="btn btn-primary">Complete My Donation</button>
+                </div>
             </div>
-          </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Go Back</button>
-          <button type="button" class="btn btn-primary">Complete My Donation</button>
-        </div>
-      </div>
-    </div>
     </div>
 
 

@@ -48,39 +48,35 @@
 <body>
 <header>
     <div class="container">
-        <div class="aboveNav">
-            <div class="twitter hidden-xs">
+        <div class="above-nav hidden-xs">
+            <div class="twitter">
                 <a href="https://twitter.com/mayorsfundphila"><i class="fa fa-twitter"></i> Follow us</a>
             </div>
-            <div class="supporter hidden-xs">
-                <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-heart"></i> Become a supporter!</a>
+            <div class="supporter">
+                <a href="#" data-toggle="modal" data-target="#support"><i class="fa fa-heart"></i> Become a supporter</a>
             </div>
         </div>
-    </div>
-    <div class="container">
         <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<?php print get_bloginfo('url'); ?>"><?php include('svg/logo_header.php'); ?></a>
-                </div>
-
-                <?php wp_nav_menu( 
-                    array( 
-                        'theme_location'    => 'primary', 
-                        'container_class'   => 'collapse navbar-collapse',
-                        'container_id'      => 'bs-example-navbar-collapse-1',
-                        'menu_class'        => 'nav navbar-nav navbar-right',
-                        'walker'            => new wp_bootstrap_navwalker()
-                    )
-                ); ?>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?php print get_bloginfo('url'); ?>"><?php include('svg/logo_header.php'); ?></a>
             </div>
+
+            <?php wp_nav_menu( 
+                array( 
+                    'theme_location'    => 'primary', 
+                    'container_class'   => 'collapse navbar-collapse',
+                    'container_id'      => 'bs-example-navbar-collapse-1',
+                    'menu_class'        => 'nav navbar-nav navbar-right',
+                    'walker'            => new wp_bootstrap_navwalker()
+                )
+            ); ?>
         </nav>
     </div>
 </header>

@@ -1,0 +1,100 @@
+.initiatives {
+    .filters {
+        float: right;
+
+    	.filter {
+    		color: $grey;
+    		font-size: 14px;
+    		text-transform: uppercase;
+    		font-weight: 700;
+      		margin-bottom: 0;
+    	}
+        .icon {
+            opacity: 0.35;
+            cursor: pointer;
+            transition: $fast-trans;
+            margin: 10px 2px;
+            top: 0;
+            position: relative;
+
+            &:hover { top: -3px; box-shadow: 0 3px 0 rgba(0,0,0,0.25); }
+        }
+    }
+
+	.initiative-summary {
+		height: 400px;
+		background-color: white;
+        display: block;
+        margin-bottom: 30px;
+        transition: $slow-trans;
+        padding: 0 25px;
+
+        &:hover {
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        }
+
+		.image {
+            z-index: 1;
+			width: 555px;
+			height: 225px;
+            overflow: hidden;
+            background: $grey;
+            margin: 0 -25px;
+
+            img {
+                width: 100%;
+            }
+		}
+		h3 {
+			padding: 45px 0 10px;
+            margin: 0;
+			font-weight: 300;
+            color: black;
+		}
+		p {
+			padding: 0 0 25px;
+            margin: 0;
+			font-weight: 300;
+            height: 24px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #333333;
+		}
+
+		.icon {
+            z-index: 2;
+            margin-top: -22px;
+            margin-left: 0;
+            margin-right: 8px;
+            float: left;
+            position: relative;
+
+            &:first-of-type {
+                margin-left: 25px;
+            }
+		}
+	}
+
+	.btn-default {
+		color: $blue;
+		border: 2px solid $blue;
+		margin-bottom: 20px;
+		margin-left: 25px;
+
+		&:hover {
+			color: #fff;
+			background-color: $blue;
+		}
+	}
+
+	.btn {
+		margin: 30px 42%;
+		padding: 12px 23px;
+
+		h4 {
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+}

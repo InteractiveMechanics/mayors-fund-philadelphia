@@ -53,8 +53,8 @@
                 $terms = get_terms( 'priorities', array('hide_empty' => 0) );
                 if ( !empty( $terms ) && !is_wp_error( $terms ) ): foreach ( $terms as $term ): ?>
                     <div class="col-sm-4">
-                        <a class="priorityBlock" href="<?php echo get_post_type_archive_link('initiative'); ?>?priority=<?php echo $term->slug; ?>">
-                            <embed class="priorityIcon" src="<?php bloginfo('template_directory'); ?>/svg/icon_<?php echo $term->slug; ?>.php" alt="graduation cap icon">
+                        <a class="priority-block <?php print $term->slug; ?>" href="<?php echo get_post_type_archive_link('initiative'); ?>?priority=<?php echo $term->slug; ?>">
+                            <div class="icon <?php print $term->slug; ?>"><?php include('svg/icon_' . $term->slug . '.php'); ?></div>
                             <h3><?php echo $term->name; ?></h3>
                             <p><?php echo $term->description; ?></p>
                         </a>

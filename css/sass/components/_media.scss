@@ -1,0 +1,88 @@
+.media {
+	h1 {
+		font-size: 42px;
+		font-family: $primary-font;
+		font-weight: 300;
+		position: initial;
+	}
+	h3 {
+		font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 20px;
+
+        > .fa { font-size: 21px; margin-right: 8px; color: #55acee; }
+	}
+
+	.news-item {
+		background-color: #ffffff;
+		margin-bottom: 20px;
+		padding: 30px;
+        transition: $slow-trans;
+
+        &:hover { box-shadow: 0 0 15px rgba(0,0,0,0.15); }
+
+		h5 {
+			font-size: 14px;
+			color: lighten($grey, 10%);
+			margin: 0 0 8px;
+		}
+		h4 {
+			margin: 5px 0 15px;
+            
+            a { font-family: $primary-font; color: #333; }
+		}
+		p {
+			margin: 0;
+
+            a { margin-left: 10px; }
+		}
+		img {
+            margin: -30px -30px 10px 30px;
+            max-width: 115px;
+            float: right;
+            max-height: 75px;
+            padding: 15px;
+            border-left: 1px solid #f1f2f2;
+            border-bottom: 1px solid #f1f2f2;
+		}
+	}
+
+    #twitter-feed {
+    	+ a {
+    		font-family: $secondary-font;
+    		font-size: 16px;
+            text-align: center;
+    	}
+        .tweet-wrapper {
+        	background-color: #ffffff;
+        	margin-bottom: 20px;
+        	padding: 20px 20px 20px 24px; 
+            transition: $slow-trans;
+            border-left: 6px solid #55acee;
+
+            &:hover { box-shadow: 0 0 15px rgba(0,0,0,0.25); }
+        }
+    }
+    
+    .pagination {
+    	> li {
+            > a {
+            	margin-left: 5px;
+            	border: 1px solid transparent;
+            	color: #000000;
+    
+            	&:hover {
+            		background-color: $secondary;
+            		color: white;
+            	}
+            }
+            
+            &.disabled {
+                > a {
+                    background-color: white;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}

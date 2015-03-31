@@ -1,7 +1,8 @@
 <?php get_header(); ?>
-<section>
+<section class="media">
     <div class="container">
         <div class="page-header">
+            <h5>Media</h5>
 			<h1>Media, Press & Partner News</h1>
 		</div>
         <div class="row">
@@ -32,12 +33,14 @@
 
                     <script src="<?php bloginfo('template_directory'); ?>/js/vendor/twitter-fetcher.js"></script>
                     <script type="text/javascript"> 
-                        twitterFetcher.fetch('431562288693121024', 'twitter-feed', 3, true, false, false, '', false, handleTweets, false);
+                        twitterFetcher.fetch('258973530748747776', 'twitter-feed', 3, true, false, false, '', false, handleTweets, false);
 
                         function handleTweets(tweets){
                             var x = tweets.length;
                             var n = 0;
                             var container = document.getElementById('twitter-feed');
+                            
+                            console.log(tweets);
 
                             var html = '<div class="tweets">';
                             while(n < x) {

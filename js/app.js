@@ -1,9 +1,9 @@
 $(function(){
     var filter = false;
 
-    $(document).on('click', '.priority-area-placeholder', function(){
+    $(document).on('click', '.icon', function(){
         var id = $(this).attr('id');
-        var $area = $('.priority-area-placeholder');
+        var $area = $('.icon');
         var $summary = $('.initiative-summary');
 
         if ($('#' + id).hasClass('active') && filter === true) {
@@ -37,17 +37,20 @@ $(function(){
 
     if( $('#priority-querystring').val() != null ){
         var priority = $('#priority-querystring').val();
+        console.log(priority);
 
-        $('.priority-area-placeholder').removeClass('active');
-        $('#' + priority).addClass('active');
+        if (priority){ 
+            $('.icon').removeClass('active');
+            $('#' + priority).addClass('active'); 
+        }
 
         $('.initiative-summary').each(function(i){
-                var priorities = $(this).attr('data-priorities');
+            var priorities = $(this).attr('data-priorities');
 
-                if ( priorities.indexOf(priority) === -1 ){
-                    $(this).parent().addClass('hidden');
-                }
-            });
+            if ( priorities.indexOf(priority) === -1 ){
+                $(this).parent().addClass('hidden');
+            }
+        });
     }
 
     $('.slideshow').slick({

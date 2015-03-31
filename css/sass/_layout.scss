@@ -1,0 +1,45 @@
+body {
+	background-color: $lightgray;
+}
+main {
+    padding: 80px 0;
+}
+img { max-width: 100%; height: auto; }
+img + figcaption { font-style: italic; color: $grey; }
+
+.page-header {
+	border-bottom: 1px solid transparent;
+    margin: 0 0 30px;
+    position: relative;
+
+    h1 {
+		font-size: 42px;
+		font-family: $primary-font;
+		font-weight: 300;
+		position: initial;
+		margin: 12px 0 0;
+        line-height: 1.3;
+        max-width: 90%;
+	}
+    h5 {
+		color: $blue;
+        font-size: 18px;
+        margin: 0;
+	}
+    h4 {
+		font-weight: 300;
+		color: $grey;
+	}
+}
+
+.hero {
+	background-color: $lightgray;
+	height: 600px;
+
+	h1 {
+		position: absolute;
+		top: 175px;
+		width: 80%;
+        z-index: 10;
+	}
+}

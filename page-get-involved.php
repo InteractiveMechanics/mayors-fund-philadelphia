@@ -17,7 +17,7 @@
                                         <h3><?php the_sub_field('title'); ?></h3>
                                         <p><?php the_sub_field('body'); ?></p>
                                         <?php if (get_sub_field('show_donate')): ?>
-                                            <a href="#" data-toggle="modal" data-target="#myModal"><?php the_sub_field('link_text'); ?>&nbsp;&raquo;</a>
+                                            <a href="#" data-toggle="modal" data-target="#support"><?php the_sub_field('link_text'); ?>&nbsp;&raquo;</a>
                                         <?php else : ?>
                                             <a href="<?php the_sub_field('link_url'); ?>" target="_blank"><?php the_sub_field('link_text'); ?>&nbsp;&raquo;</a>
                                         <?php endif; ?>

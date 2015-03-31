@@ -1,14 +1,43 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
-    <section class="single-initiative">
+    <section class="profile">
         <div class="container">
             <div class="page-header">
-    			<h1><small>Our Initiatives</small></br><?php the_title(); ?></h1>
-    			<p class="lead"><?php the_field('short_description'); ?></p>
+                <h5>Our Initiatives</h5>
+                <h1><?php the_title(); ?></h1>
+    			<h4><?php the_field('short_description'); ?></h4>
+
+                <?php $next = get_next_post(); ?>
+                <?php $prev = get_previous_post(); ?>
+
+                <?php if ( $prev ): ?>
+                    <a class="arrow left-arrow" href="<?php echo $prev->guid; ?>">
+                        <i class="fa fa-angle-left fa-2x"></i>
+                        <div class="overlay">
+                            <h4><?php echo $prev->post_title; ?></h4>
+                            <p><?php echo the_field('short_description', $prev->id); ?></p>
+                        </div>
+                    </a>
+                <?php endif; ?>
+                <?php if ( $next ): ?>
+                    <a class="arrow right-arrow" href="<?php echo $next->guid; ?>">
+                        <i class="fa fa-angle-right fa-2x"></i>
+                        <div class="overlay">
+                            <h4><?php echo $next->post_title; ?></h4>
+                            <p><?php echo the_field('short_description', $next->id); ?></p>
+                        </div>
+                    </a>
+                <?php endif; ?>
     		</div>
         	<div class="row">
-        		<div class="col-sm-8">
+        		<div class="col-sm-8 col-md-8">
         			<article>
+                        <?php if (has_post_thumbnail()): ?>
+                            <figure>
+                                <?php the_post_thumbnail( 'full' ); ?> 
+                                <figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
+                            </figure>
+                        <?php endif; ?>
                         <?php if( have_rows('blockquote') ): while ( have_rows('blockquote') ): the_row(); ?>
             				<blockquote>
             					<p>"<?php the_sub_field('quote'); ?>"</p>
@@ -18,53 +47,58 @@
         				<?php the_content(); ?>
         			</article>
         		</div>
-    			<aside class="col-sm-3 col-sm-offset-1">
-                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Support this project</a>
-                    <?php if( have_rows('video') ): ?>
+    			<div class="col-sm-4 col-md-3 col-md-offset-1">
+    			    <aside>
                         <div class="sidebar-section">
-                            <?php while ( have_rows('video') ): the_row(); ?>
-                                <a href="<?php the_sub_field('url'); ?>" target="_blank">
-                                    <img src="<?php the_sub_field('image'); ?>" />
-                                </a>
-                            <?php endwhile; ?>
+                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#support"><i class="fa fa-heart"></i> Support this project</a>
                         </div>
-                    <?php endif; ?>
-
-                    <?php
-                        $terms = get_the_terms( $post->ID, 'priorities' );
-                        if ( $terms && !is_wp_error( $terms ) ) : 
-                        	$priorities = array(); ?>
+                        <?php if( have_rows('video') ): ?>
                             <div class="sidebar-section">
-                                <h3>Priority Areas</h3>
-                                <ul>
-                                	<?php foreach ( $terms as $term ): ?>
-                                		<li><?php include('svg/icon_' . $term->slug . '.php'); ?> <?php print $term->name; ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
-                    <?php endif; ?>
-
-    				<?php if( have_rows('contact_info') ): ?>
-                        <div class="sidebar-section">
-                            <h3>Contact Information</h3>
-        				    <ul>
-                                <?php while ( have_rows('contact_info') ): the_row(); ?>
-                                    <li><a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a></li>
+                                <?php while ( have_rows('video') ): the_row(); ?>
+                                    <a href="<?php the_sub_field('url'); ?>" target="_blank">
+                                        <img src="<?php the_sub_field('image'); ?>" />
+                                    </a>
                                 <?php endwhile; ?>
-        				    </ul>
-                        </div>
-                    <?php endif; ?>
-                    <?php if( have_rows('sponsors') ): ?>
-                        <div class="sidebar-section">
-                            <h3>Sponsors</h3>
-                            <?php while ( have_rows('sponsors') ): the_row(); ?>
-                                <a href="<?php the_sub_field('url'); ?>" target="_blank">
-                                    <img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>" title="<?php the_sub_field('title'); ?>" />
-                                </a>
-                            <?php endwhile; ?>
-                        </div>
-                    <?php endif; ?>
-    			</aside>
+                            </div>
+                        <?php endif; ?>
+    
+                        <?php
+                            $terms = get_the_terms( $post->ID, 'priorities' );
+                            if ( $terms && !is_wp_error( $terms ) ) : 
+                            	$priorities = array(); ?>
+                                <div class="sidebar-section">
+                                    <h3>Priority Areas</h3>
+                                	<?php foreach ( $terms as $term ): ?>
+                                        <div class="icon-container <?php print $term->slug; ?>">
+                                    		<div class="icon <?php print $term->slug; ?>"><?php include('svg/icon_' . $term->slug . '.php'); ?></div>
+                                            <?php print $term->name; ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                        <?php endif; ?>
+    
+        				<?php if( have_rows('contact_info') ): ?>
+                            <div class="sidebar-section">
+                                <h3>Contact Information</h3>
+            				    <ul>
+                                    <?php while ( have_rows('contact_info') ): the_row(); ?>
+                                        <li><a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a></li>
+                                    <?php endwhile; ?>
+            				    </ul>
+                            </div>
+                        <?php endif; ?>
+                        <?php if( have_rows('sponsors') ): ?>
+                            <div class="sidebar-section">
+                                <h3>Sponsors</h3>
+                                <?php while ( have_rows('sponsors') ): the_row(); ?>
+                                    <a href="<?php the_sub_field('url'); ?>" target="_blank" class="sponsor">
+                                        <img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>" title="<?php the_sub_field('title'); ?>" />
+                                    </a>
+                                <?php endwhile; ?>
+                            </div>
+                        <?php endif; ?>
+                    </aside>
+    			</div>
         	</div>
         </div>
     </section>

@@ -1,0 +1,46 @@
+.icon {
+	display: inline-block;
+	height: 44px;
+	width: 44px;
+	border-radius: 50%;
+	background-color: $blue;
+    text-align: center;
+
+    &.active {
+        opacity: 1 !important;
+    }
+
+    > svg {
+        display: inline;
+        vertical-align: middle;
+        height: 100%;
+    }
+
+    &.education-health  { background: $tmf-education; }
+    &.sustainability    { background: $tmf-environment; }
+    &.government        { background: $tmf-government; }
+    &.place-of-choice   { background: $tmf-place; svg { margin-top: -2px; } }
+    &.public-safety     { background: $tmf-safety; }
+}
+
+.icon-container {
+    color: $blue;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    padding-left: 50px;
+    clear: both;
+
+    > .icon { 
+        float: left !important; 
+        margin-right: 16px; 
+        margin-left: -50px; 
+        margin-bottom: 20px; 
+    }
+
+    &.education-health  { color: $tmf-education; }
+    &.sustainability    { color: $tmf-environment; }
+    &.government        { color: $tmf-government; }
+    &.place-of-choice   { color: $tmf-place; }
+    &.public-safety     { color: $tmf-safety; }
+}
