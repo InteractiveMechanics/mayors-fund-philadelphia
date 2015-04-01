@@ -47,29 +47,30 @@
                 <div class="modal-body">
                     <form>
                         <div class="donation-form">
-                            <div class="form-group">
-                                <p>Thank you for choosing to make a contribution to the Mayor's Fund for Philadelphia.  You can designate your contribution for a specific program, or your contribution go toward the Fund's most urgent need.</p>
-                                <label for="program-list">Program</label> 
-                                <select name="Programs" id="program-list">
-                                    <option value="all">Most Urgent Need</option>
-                                    <option value="the-dilworth-award">Dilworth Award</option>
-                                    <option value="Graduation Coaches">Graduation Coaches</option>
-                                    <option value="Better Bike Share Parntership">Better Bike Share Partnership</option>
-                                    <option value "Mayor's Summer Job Challenge">Mayor's Summer Job Challenge</option>
-                                </select>
-                            </div>
-                            <div class="form group">
-                                <div class="input-group">
+                            <p>Thank you for choosing to make a contribution to the Mayor's Fund for Philadelphia.  You can designate your contribution for a specific program, or your contribution go toward the Fund's most urgent need.</p>
+                            <div class="row">
+                                <div class="form-group col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                                    <label for="program-list">Program</label> 
+                                    <select name="Programs" id="program-list">
+                                        <option value="all">Most Urgent Need</option>
+                                        <option value="the-dilworth-award">Dilworth Award</option>
+                                        <option value="Graduation Coaches">Graduation Coaches</option>
+                                        <option value="Better Bike Share Parntership">Better Bike Share Partnership</option>
+                                        <option value "Mayor's Summer Job Challenge">Mayor's Summer Job Challenge</option>
+                                    </select>
+                                </div>
+                                <div class="form group col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                                     <label>Donation Amount</label>
-                                    <span class="input-group-addon">$</span>
-                                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Go Back</button>
                     <button type="button" class="btn btn-primary">Complete My Donation</button>
                 </div>
             </div>
@@ -79,6 +80,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/vendor/bootstrap.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/vendor/bootstrap-select.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/vendor/slick.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/app.js"></script>
 

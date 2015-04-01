@@ -1,0 +1,61 @@
+.hero.homepage {
+    overflow: hidden;
+    margin-top: -80px;
+    height: 650px;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 200px;
+        left: 0;
+        right: 0;
+        background: -moz-linear-gradient(top, transparent 0%, transparent 24%, rgba(0, 0, 0, 0.1) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(24%, transparent), color-stop(100%, rgba(0, 0, 0, 0.1)));
+        background: -webkit-linear-gradient(top, transparent 0%, transparent 24%, rgba(0, 0, 0, 0.1) 100%);
+        background: -o-linear-gradient(top, transparent 0%, transparent 24%, rgba(0, 0, 0, 0.1) 100%);
+        background: -ms-linear-gradient(top, transparent 0%, transparent 24%, rgba(0, 0, 0, 0.1) 100%);
+        background: linear-gradient(to bottom, transparent 0%, transparent 24%, rgba(0, 0, 0, 0.1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33000000',GradientType=0 );
+    }
+
+    h1 {
+        font-family: $primary-font;
+        color: white;
+        text-shadow: 0 3px 0 rgba(0,0,0,0.35), 0 0 15px rgba(0,0,0,0.15);
+        line-height: 1.4;
+        width: 85%;
+        pointer-events: none;
+    }
+    
+    .hero-mission-statement { 
+        position: absolute; 
+        width: 100%;
+        z-index: 9;
+        margin-top: 100px;
+    }
+    .slideshow {
+        .slick-track { height: 650px; }
+        .slideshow-slide {}
+        .slideshow-caption {
+            position: absolute;
+            bottom: 125px;
+            height: 100px;
+            background: rgba(0,0,0,0.25);
+            border: rgba(0,0,0,0.4);
+            padding: 25px 60px 25px 30px;
+            transition: $slow-trans;
+            z-index: 9;
+
+            h3 {
+                color: white;
+                margin: 0 0 5px;
+            }
+            p {
+                color: white;
+                margin: 0;
+            }
+        }
+    }
+}

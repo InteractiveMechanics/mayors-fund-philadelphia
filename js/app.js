@@ -60,4 +60,7 @@ $(function(){
         autoplaySpeed: 6000,
         arrows: false
     });
+
+    $('#program-list').selectpicker();
+    $('#program-list').selectpicker('setStyle', 'input-lg', 'add')
 });

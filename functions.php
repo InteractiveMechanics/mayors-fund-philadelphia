@@ -337,6 +337,7 @@
             echo $thumbnail_image[0]->post_excerpt; 
         }
     }
+
 ?>
 
 

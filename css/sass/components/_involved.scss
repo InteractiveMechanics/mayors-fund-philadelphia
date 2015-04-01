@@ -1,106 +1,66 @@
-.involved {
-	
-	h1 {
-		font-size: 42px;
-		font-family: Merriweather, Georgia, serif;
-		font-weight: 300;
-		position: initial;
-	}
-	
-	h4 {
-		font-weight: 300;
-		color: $grey;
-	}
+.get-involved {
+	.block {
+        min-height: 345px;
+        background-color: #ffffff;
+        padding: 30px;
+        margin-bottom: 50px;
+        position: relative;
+        transition: $slow-trans;
 
-	.get-involved-block {
-		min-height: 345px;
-		background-color: #ffffff;
-		padding: 40px 40px 40px 40px;
-		margin-top: 50px;
-		margin-bottom: 50px;
-		border-bottom: 6px solid $blue;
 		p {
 			padding-bottom: 20px;
+            margin: 0;
 		}
-	}
+        h3 {
+            font-weight: 300;
+        }
 
-	.svg-placeholder {
-		background-color: $blue;
-		width: 45px;
-		height: 45px;
-		border-radius: 50%;
-		margin-bottom: 25px;
-	}
+        .btn {
+            border: 2px solid $blue;
+            background: none;
+            color: $blue;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 10px 0 12px;
+            transition: $slow-trans;
 
-	h5 {
-		text-transform: initial;
-	}	
+            &:hover {
+                background: $blue;
+                color: white;
+            }
+        }
+        .icon {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            margin: 0 auto 10px;
+            z-index: 2;
+            display: block;
+            color: white;
+            font-size: 27px;
 
-	.tax-deductible-statement {
-		font-weight: 700;
-	}
+            .fa { margin-top: 15px; }
+        }
 
-	article {
-		margin-bottom: 70px;
-		margin-right: 60px;
-		h3 {
-			margin-bottom: 20px;
-		}
+        &:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+        &:before {
+            content: '';
+            background: lighten($tmf-safety, 10%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+        }
+        &.heart-o   { &:before { background: lighten($tmf-safety, 10%); } .icon { background: $tmf-safety; }}
+        &.users     { &:before { background: lighten($accent-green, 10%); } .icon { background: $accent-green; }}
+        &.gift      { &:before { background: lighten($tmf-education, 10%); } .icon { background: $tmf-education; }}
 	}
 
 	aside {
 		margin-top: 15px;
 		margin-bottom: 100px;
 	}
-
-	.vcard {
-		margin-left: 20px;
-		margin-bottom: 20px;
-		font-size: 16px;
-		font-family: "Source Sans Pro", Arial, sans-serif;
-	}
-
-	#myModalLabel {
-		font-family: "Source Sans Pro", Arial, sans-serif;
-	}
-
-}
-
-#myModal {
-	.modal-footer {
-		font-family: "Source Sans Pro", Arial, sans-serif;
-		.btn-primary {
-			color: $blue;
-			background-color: #fff;
-			border: 2px solid $blue;
-			&:hover {
-				color: #fff;
-				background-color: $blue; 
-			}
-		}
-		.btn-default {
-			color: $grey;
-			background-color: #fff;
-			border: 2px solid $grey;
-			&:hover {
-				color: #fff;
-				background-color: $grey;
-			}
-		}
-
-	}
-}
-
-.modal-body {
-	font-size: 20px;
-	font-family: "Source Sans Pro", Arial, sans-serif;
-	select {
-		float: right;
-		border-radius: 4px;
-	}
-	.input-group .form-control {
-		float: none;
-	}
-
-
 }

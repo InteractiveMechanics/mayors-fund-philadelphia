@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
-    <section class="hero">
-        <div class="container">
-            <h1><?php the_field('mission_statement'); ?></h1>
+    <section class="hero homepage">
+        <div class="hero-mission-statement">
+            <div class="container">
+                <h1><?php the_field('mission_statement'); ?></h1>
+            </div>
         </div>
         <div class="slideshow">
             <?php if( have_rows('hero_slideshow') ): while ( have_rows('hero_slideshow') ): the_row(); ?>
@@ -12,10 +14,12 @@
                     <?php $initiatives = get_sub_field('initiative'); ?>
                     <?php if ($initiatives): foreach( $initiatives as $post): ?>
                         <?php setup_postdata($post); ?>
-    				    <a href="<?php the_permalink(); ?>">
-                            <h3>Program Spotlight: <?php the_title(); ?></h3>
-                            <p><?php the_field('short_description'); ?></p>
-    				    </a>
+                        <div class="container">
+        				    <a href="<?php the_permalink(); ?>" class="slideshow-caption">
+                                <h3>Program Spotlight: <?php the_title(); ?></h3>
+                                <p><?php the_field('short_description'); ?></p>
+        				    </a>
+                        </div>
                         <?php wp_reset_postdata(); ?>
                     <?php endforeach; endif; ?>
                 </div>

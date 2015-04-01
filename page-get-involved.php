@@ -1,25 +1,26 @@
 <?php get_header(); ?>
-<section>
+<section class="get-involved">
     <div class="container">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <div class="row">
                 <div class="col-sm-12">
                     <?php get_template_part('includes/inc-title'); ?>
-                    <?php if( get_field('short_desc')){ echo '<h3>' . get_field('short_desc') . '</h3>'; } ?>
                 </div>
                 <div class="col-sm-12">
                     <?php if( have_rows('blocks') ): ?>
                         <div class="row">
                             <?php while ( have_rows('blocks') ): the_row(); ?>
                                 <div class="col-sm-4">
-                                    <div class="block">
-                                        <div class="icon"><?php the_sub_field('icon'); ?></div>
+                                    <div class="block <?php the_sub_field('icon'); ?>">
+                                        <div class="icon"><i class="fa fa-<?php the_sub_field('icon'); ?>"></i></div>
                                         <h3><?php the_sub_field('title'); ?></h3>
                                         <p><?php the_sub_field('body'); ?></p>
                                         <?php if (get_sub_field('show_donate')): ?>
-                                            <a href="#" data-toggle="modal" data-target="#support"><?php the_sub_field('link_text'); ?>&nbsp;&raquo;</a>
+                                            <a href="#" data-toggle="modal" data-target="#support" class="btn btn-primary btn-block">
+                                                <?php the_sub_field('link_text'); ?>&nbsp;&raquo;</a>
                                         <?php else : ?>
-                                            <a href="<?php the_sub_field('link_url'); ?>" target="_blank"><?php the_sub_field('link_text'); ?>&nbsp;&raquo;</a>
+                                            <a href="<?php the_sub_field('link_url'); ?>" target="_blank" class="btn btn-primary btn-block">
+                                                <?php the_sub_field('link_text'); ?>&nbsp;&raquo;</a>
                                         <?php endif; ?>
                                     </div>
                                 </div>
@@ -30,10 +31,10 @@
                    
                     
                     <div class="row">
-                        <div class="col-sm-8 col-md-9">
+                        <div class="col-sm-8">
                             <?php get_template_part('includes/inc-content'); ?>
                         </div>
-                        <div class="col-sm-4 col-md-3">
+                        <div class="col-sm-4">
                             <?php if( get_field('contributions')){ the_field('contributions'); } ?>
                         </div>
                     </div>

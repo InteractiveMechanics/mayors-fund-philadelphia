@@ -8,6 +8,7 @@ Version: 1.0
 */
 
 @import url('css/vendor/bootstrap.min.css');
+@import url('css/vendor/bootstrap-select.min.css');
 @import url('css/vendor/slick.css');
 @import url('css/main.css');
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');

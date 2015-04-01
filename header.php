@@ -1,4 +1,9 @@
 <?php 
+    global $post;
+    $slug = get_post( $post )->post_name;
+
+    if ( $slug === 'about' ){ wp_redirect( get_permalink(46) ); exit; }
+
     function detectmobile(){
         $agent = $_SERVER['HTTP_USER_AGENT'];
         $useragents = array (

@@ -13,7 +13,8 @@
                             <?php while ( have_rows('files') ): the_row(); ?>
                                 <?php $file = get_sub_field('file'); ?>
                                 <a href="<?php print $file['url']; ?>" class="resource">
-                                    <h4><span class="resource_type"><?php print substr($file['mime_type'], strpos($file['mime_type'], '/') + 1); ?></span><?php the_sub_field('name'); ?></h4>
+                                    <span class="resource-type"><?php print substr($file['mime_type'], strpos($file['mime_type'], '/') + 1); ?></span>
+                                    <h3><?php the_sub_field('name'); ?></h3>
                                 </a>
                             <?php endwhile; ?>
                         </div>
