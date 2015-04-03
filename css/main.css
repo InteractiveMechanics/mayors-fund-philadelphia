@@ -35,7 +35,7 @@ h5 {
 
 p {
   font-family: "Source Sans Pro", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.6; }
   p.lead {
@@ -136,8 +136,7 @@ img + figcaption {
     margin: 10px 0 0; }
 
 .hero {
-  background-color: #f1f2f2;
-  height: 600px; }
+  background-color: #f1f2f2; }
   .hero h1 {
     width: 100%;
     z-index: 10; }
@@ -208,8 +207,9 @@ header {
         text-align: center; } }
     @media screen and (max-width: 767px) {
       header .navbar .navbar-nav li {
-        margin: 15px;
-        border-bottom: 1px solid #f1f2f2; } }
+        border-bottom: 1px solid #f1f2f2;
+        background-color: #fff;
+        z-index: 12; } }
     header .navbar .navbar-nav li > a {
       color: black;
       font-family: "Merriweather", Georgia, serif;
@@ -439,6 +439,10 @@ footer {
   .profile aside ul {
     margin: 0 0 0 18px;
     padding: 0; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      .profile aside ul {
+        list-style-type: none;
+        margin-left: -5px; } }
     .profile aside ul > li {
       padding-left: 6px;
       line-height: 1.6; }
@@ -452,6 +456,9 @@ footer {
       border: none; }
   .profile aside .icon {
     float: none; }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    .profile aside .icon-container {
+      padding-left: 40px; } }
   .profile aside .btn {
     color: #EB5846;
     border: 2px solid #EB5846;
@@ -467,6 +474,12 @@ footer {
     .profile aside .btn:hover {
       color: white;
       background-color: #EB5846; }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      .profile aside .btn {
+        font-size: 12px; } }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .profile aside .btn {
+        font-size: 14px; } }
 .profile .arrow {
   position: absolute;
   top: 32px;
@@ -575,6 +588,10 @@ footer {
 
 .initiatives .filters {
   float: right; }
+  @media screen and (max-width: 767px) {
+    .initiatives .filters {
+      margin-top: 20px;
+      float: left; } }
   .initiatives .filters .filter {
     color: #808080;
     font-size: 14px;
@@ -658,7 +675,7 @@ footer {
   .page .hero h5 {
     color: #ffffff;
     margin-top: 400px;
-    font-size: 21px; }
+    font-size: 20px; }
 .page .callout {
   background-color: #fff;
   text-align: center;

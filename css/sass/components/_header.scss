@@ -32,6 +32,7 @@ header {
             &:hover {
                 opacity: 0.65;
             }
+
         }
 
 		.navbar-nav {
@@ -47,8 +48,9 @@ header {
 
 			li {
 				@media screen and #{$screen-xs} {
-					margin: 15px;
 					border-bottom: 1px solid $lightgray;
+                    background-color: #fff;
+                    z-index: 12;
 				}
 
                 > a {
