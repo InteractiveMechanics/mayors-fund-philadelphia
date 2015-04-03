@@ -500,12 +500,20 @@ footer {
   .profile .arrow.left-arrow {
     left: -60px;
     padding-left: 2px; }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .profile .arrow.left-arrow {
+        left: -10px;
+        top: -52px; } }
     .profile .arrow.left-arrow .overlay {
       left: 55px;
       text-align: left; }
   .profile .arrow.right-arrow {
     right: -60px;
     padding-right: 2px; }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .profile .arrow.right-arrow {
+        right: -10px;
+        top: -52px; } }
     .profile .arrow.right-arrow .overlay {
       right: 55px;
       text-align: right; }
@@ -623,7 +631,8 @@ footer {
     height: 225px;
     overflow: hidden;
     background: #808080;
-    margin: 0 -25px; }
+    margin: 0 -25px;
+    background-size: cover; }
     .initiatives .initiative-summary .image img {
       width: 100%; }
   .initiatives .initiative-summary h3 {

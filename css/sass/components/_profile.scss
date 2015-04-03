@@ -147,11 +147,22 @@
             left: -60px;
     		padding-left: 2px;
 
+            @media screen and #{$screen-sm} {
+                left: -10px;
+                top: -52px;
+            }
+
             .overlay { left: 55px; text-align: left; }
     	}
     	&.right-arrow {
     		right: -60px;
     		padding-right: 2px; 
+
+            @media screen and #{$screen-sm} {
+                right: -10px;
+                top: -52px;
+            }
+
 
             .overlay { right: 55px; text-align: right; }
     	}
