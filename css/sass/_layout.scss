@@ -4,6 +4,7 @@ body {
 main {
     padding: 80px 0;
 }
+
 img { max-width: 100%; height: auto; }
 img + figcaption { font-style: italic; color: $grey; }
 
@@ -35,12 +36,14 @@ img + figcaption { font-style: italic; color: $grey; }
 
 .hero {
 	background-color: $lightgray;
-	height: 600px;
+	//height: 600px;
 
 	h1 {
 		width: 100%;
         z-index: 10;
 	}
+
+
 }
 
 #support {

@@ -64,6 +64,11 @@
             margin: 0 0 0 18px;
             padding: 0;
 
+            @media screen and #{$screen-md} {
+                list-style-type: none;
+                margin-left: -5px;
+            }
+
             > li {
                 padding-left: 6px;
                 line-height: 1.6;
@@ -77,10 +82,21 @@
 
             &:first-of-type { padding-top: 0; }
             &:last-of-type { border: none; }
+
+            @media screen and #{$screen-md} {
+                //text-align: center;
+            }
     	}
         .icon {
             float: none;
         }
+
+        .icon-container {
+            @media screen and #{$screen-md} {
+                padding-left: 40px;
+            }
+        }
+
     	.btn {
     		color: $donate;
     		border: 2px solid $donate;
@@ -96,6 +112,14 @@
     			color: white;
     			background-color: $donate;
     		}
+
+            @media screen and #{$screen-md} {
+                font-size: 12px;
+            }
+
+            @media screen and #{$screen-sm} {
+                font-size: 14px;
+            }
     	}
 	}
 
@@ -123,11 +147,22 @@
             left: -60px;
     		padding-left: 2px;
 
+            @media screen and #{$screen-sm} {
+                left: -10px;
+                top: -52px;
+            }
+
             .overlay { left: 55px; text-align: left; }
     	}
     	&.right-arrow {
     		right: -60px;
     		padding-right: 2px; 
+
+            @media screen and #{$screen-sm} {
+                right: -10px;
+                top: -52px;
+            }
+
 
             .overlay { right: 55px; text-align: right; }
     	}

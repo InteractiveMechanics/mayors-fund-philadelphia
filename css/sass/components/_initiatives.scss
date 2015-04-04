@@ -2,13 +2,19 @@
     .filters {
         float: right;
 
+        @media screen and #{$screen-xs} {
+            margin-top: 20px;
+            float: left;
+        }
+
     	.filter {
     		color: $grey;
     		font-size: 14px;
     		text-transform: uppercase;
     		font-weight: 700;
       		margin-bottom: 0;
-    	}
+            }
+    	
         .icon {
             opacity: 0.35;
             cursor: pointer;
@@ -40,6 +46,7 @@
             overflow: hidden;
             background: $grey;
             margin: 0 -25px;
+            background-size: cover;
 
             img {
                 width: 100%;

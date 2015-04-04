@@ -27,7 +27,8 @@
                 <?php $terms = get_the_terms( $post->ID, 'priorities' ); ?>
                 <div class="col-sm-6">
                     <a href="<?php the_permalink(); ?>" class="initiative-summary" data-priorities="<?php foreach ( $terms as $term ){ echo $term->slug . ' '; } ?>">
-                        <div class="image"><?php the_post_thumbnail( 'full' ); ?></div>
+                       <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullsize' ); ?>
+                       <div class="image" style="background-image:url('<?php print $image[0]; ?>');"></div>
                         <?php foreach ( $terms as $term ): ?>
                             <div class="icon <?php print $term->slug; ?>"><?php include('svg/icon_' . $term->slug . '.php'); ?></div>
                         <?php endforeach; ?>
