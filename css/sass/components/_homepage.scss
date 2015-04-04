@@ -18,6 +18,7 @@
         background: -ms-linear-gradient(top, transparent 0%, transparent 24%, rgba(0, 0, 0, 0.1) 100%);
         background: linear-gradient(to bottom, transparent 0%, transparent 24%, rgba(0, 0, 0, 0.1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33000000',GradientType=0 );
+        pointer-events: none;
     }
 
     h1 {
@@ -26,36 +27,213 @@
         text-shadow: 0 3px 0 rgba(0,0,0,0.35), 0 0 15px rgba(0,0,0,0.15);
         line-height: 1.4;
         width: 85%;
-        pointer-events: none;
     }
     
     .hero-mission-statement { 
         position: absolute; 
         width: 100%;
         z-index: 9;
-        margin-top: 100px;
+        margin-top: 140px;
+        pointer-events: none;
     }
     .slideshow {
         .slick-track { height: 650px; }
-        .slideshow-slide {}
+        .slideshow-slide {
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.2);
+        }
         .slideshow-caption {
             position: absolute;
             bottom: 125px;
-            height: 100px;
-            background: rgba(0,0,0,0.25);
-            border: rgba(0,0,0,0.4);
-            padding: 25px 60px 25px 30px;
+            min-height: 100px;
+            background: rgba($accent-green, 0.75);
+            padding: 25px 75px 25px 25px;
             transition: $slow-trans;
             z-index: 9;
+            max-width: 675px;
+            display: block;
+
+            &:hover {
+                background: rgba($accent-green, 0.9);
+
+                &:after { opacity: 0.75; }
+            }
+            &:after {
+                position: absolute;
+                content: '\203A';
+                top: 50%;
+                height: 40px;
+                margin-top: -30px;
+                font-size: 40px;
+                opacity: 0.5;
+                right: 20px;
+                color: white;
+            }
 
             h3 {
                 color: white;
                 margin: 0 0 5px;
+                font-size: 24px;
+                font-weight: 300;
             }
             p {
                 color: white;
                 margin: 0;
+                font-weight: 300;
+                line-height: 1.2;
             }
         }
     }
+}
+
+.middle {
+	background-color: white;
+	margin-bottom: 100px;
+    height: 650px;
+
+    .nav {
+        &.nav-pills {
+    		margin-top: 60px;
+    		margin-bottom: 25px;
+    		display: inline-block;
+    
+            > li { 
+                margin: 0 6px;
+
+                > a {
+        		    border-radius: 25px;
+                    padding: 7px 18px 9px;
+                    font-weight: 700;
+                    font-size: 16px;
+                    border: 2px solid darken($lightgray, 15%);
+                    color: darken($lightgray, 15%);
+                    transition: $slow-trans;
+
+                    &:hover {
+                        border: 2px solid darken($lightgray, 15%);
+                        background: darken($lightgray, 15%);
+                        color: white;
+                    }
+                }
+
+                &.active a, &.active a:hover {
+                    border: 2px solid $blue;
+                    color: $blue;
+                    background: none;
+                }
+        	}
+        }
+    }
+
+	#our-mayor {
+        blockquote {
+    		border-left: none;
+    		margin-left: -30px;
+    		padding: 40px;
+    		background-color: $blue;
+    		height: 460px;
+    
+            p {
+                font-family: $primary-font;
+                line-height: 1.8;
+                color: white;
+                margin-bottom: 20px;
+            }
+    		footer {
+                padding: 0;
+                margin: 0;
+                text-align: right;
+                color: rgba(255,255,255,0.75);
+                font-style: italic;
+                background: none;
+    		}
+    	}
+    }
+}
+
+.priorities {
+	margin-top: 100px;
+
+    p > a { font-weight: 700; text-decoration: underline; }
+
+	.priority-block {
+		min-height: 300px;
+        background-color: #ffffff;
+        padding: 30px;
+        margin-bottom: 50px;
+        position: relative;
+        transition: $slow-trans;
+        display: block;
+
+        h3 {
+            font-family: $secondary-font;
+            font-weight: 400;
+            font-size: 27px;
+            top: 100px;
+            position: absolute;
+            left: 30px;
+            right: 30px;
+
+            small {
+                display: block;
+                color: gray;
+                margin: 15px 0;
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 1.4;
+            }
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            margin: 0 auto 10px;
+            z-index: 2;
+            display: block;
+            color: white;
+            font-size: 27px;
+            transition: $fast-trans;
+            top: 0;
+            text-align: center;
+
+            svg { transition: $fast-trans; width: 24px; }
+        }
+
+        &:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+
+            .icon { width: 80px; height: 80px; top: -10px; }
+                svg { width: 36px; }
+        }
+        &:before {
+            content: '';
+            background: lighten($tmf-safety, 10%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            opacity: 0.75;
+        }
+
+        &.education-health:before  { background: $tmf-education; }
+        &.sustainability:before    { background: $tmf-environment; }
+        &.government:before        { background: $tmf-government; }
+        &.place-of-choice:before   { background: $tmf-place; }
+        &.public-safety:before     { background: $tmf-safety; }
+
+        &.education-health h3      { color: $tmf-education; }
+        &.sustainability h3        { color: $tmf-environment; }
+        &.government h3            { color: $tmf-government; }
+        &.place-of-choice h3       { color: $tmf-place; }
+        &.public-safety h3         { color: $tmf-safety; }
+	}
 }

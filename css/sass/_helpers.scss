@@ -11,61 +11,6 @@
 	margin-bottom: 50px;
 }
 
-.middle {
-	background-color: $lightgray;
-	margin-bottom: 100px;
-
-	blockquote {
-		border-left: none;
-		margin-left: -30px;
-		padding-top: 36px;
-		background-color: $lightgray;
-		height: 460px;
-
-		footer {
-			background-color: $lightgray;
-			padding-top: 0px;
-		}
-	}
-	.nav {
-        &.nav-pills {
-    		margin-top: 50px;
-    		margin-bottom: 25px;
-    		display: inline-block;
-    
-            > li { 
-                > a {
-        		    border-radius: 25px;
-                }
-        	}
-        }
-
-        > li {
-            > a {
-        		padding: 5px 20px;
-        		margin-right: 20px;
-        	}
-        }
-    }
-}
-
-.priorities {
-	margin-top: 100px;
-	margin-bottom: 100px;
-
-	.priority-block {
-		height: 280px;
-		padding: 36px 22px;
-		background-color: $lightgray;
-		margin-bottom: 25px;
-		border-bottom: 6px solid black;
-	}
-	.priority-icon {
-		height: 50px;
-		width: 50px;
-	}
-}
-
 a.view-more {
 	text-align: center;
 	font-family: $secondary-font;

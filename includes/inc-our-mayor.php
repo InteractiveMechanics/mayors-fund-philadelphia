@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <?php the_field('our_mayor_video_url'); ?>
+            <iframe width="100%" height="460px" src="<?php the_field('our_mayor_video_url'); ?>" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="col-md-4">
             <blockquote>

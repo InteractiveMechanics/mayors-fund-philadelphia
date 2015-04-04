@@ -10,13 +10,14 @@
             <?php if( have_rows('hero_slideshow') ): while ( have_rows('hero_slideshow') ): the_row(); ?>
                 <div class="slideshow-slide">
                     <img src="<?php the_sub_field('image'); ?>" />
+                    <div class="overlay"></div>
 
                     <?php $initiatives = get_sub_field('initiative'); ?>
                     <?php if ($initiatives): foreach( $initiatives as $post): ?>
                         <?php setup_postdata($post); ?>
                         <div class="container">
         				    <a href="<?php the_permalink(); ?>" class="slideshow-caption">
-                                <h3>Program Spotlight: <?php the_title(); ?></h3>
+                                <h3><?php the_title(); ?></h3>
                                 <p><?php the_field('short_description'); ?></p>
         				    </a>
                         </div>
@@ -38,9 +39,9 @@
             </div>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade in active" id="our-mayor"><?php include('includes/inc-our-mayor.php'); ?></div>
-                <div role="tabpanel" class="tab-pane fade" id="our-city"></div>
-                <div role="tabpanel" class="tab-pane fade" id="our-programs"></div>
-                <div role="tabpanel" class="tab-pane fade" id="our-impact"></div>
+                <div role="tabpanel" class="tab-pane fade" id="our-city"><?php include('includes/inc-our-city.php'); ?></div>
+                <div role="tabpanel" class="tab-pane fade" id="our-programs"><?php include('includes/inc-our-programs.php'); ?></div>
+                <div role="tabpanel" class="tab-pane fade" id="our-impact"><?php include('includes/inc-our-impact.php'); ?></div>
             </div>
         </div>
     </section>
@@ -50,7 +51,7 @@
                 <?php if( have_rows('priorities_section') ): while ( have_rows('priorities_section') ): the_row(); ?>
                     <h3><?php the_sub_field('title'); ?></h3>
                     <p><?php the_sub_field('description'); ?></p>
-                    <p><a href="<?php echo get_post_type_archive_link('initiative'); ?>">View our project initiatives.</a></p>
+                    <p><a href="<?php echo get_post_type_archive_link('initiative'); ?>">View our project initiatives &raquo;</a></p>
                 <?php endwhile; endif; ?>
             </div>
             <?php
@@ -59,8 +60,10 @@
                     <div class="col-sm-4">
                         <a class="priority-block <?php print $term->slug; ?>" href="<?php echo get_post_type_archive_link('initiative'); ?>?priority=<?php echo $term->slug; ?>">
                             <div class="icon <?php print $term->slug; ?>"><?php include('svg/icon_' . $term->slug . '.php'); ?></div>
-                            <h3><?php echo $term->name; ?></h3>
-                            <p><?php echo $term->description; ?></p>
+                            <h3>
+                                <?php echo $term->name; ?>
+                                <small><?php echo $term->description; ?></small>
+                            </h3>
                         </a>
                     </div>
             <?php endforeach; endif; ?>

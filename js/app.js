@@ -57,7 +57,7 @@ $(function(){
         dots: true,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 7000,
         arrows: false
     });
 
