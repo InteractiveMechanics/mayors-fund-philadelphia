@@ -14,7 +14,7 @@
                         <?php
                             $terms = get_terms( 'priorities', array('hide_empty' => 0) );
                             if ( !empty( $terms ) && !is_wp_error( $terms ) ): foreach ( $terms as $term ): ?>
-                                <div class="icon <?php print $term->slug; ?> active" id="<?php echo $term->slug; ?>">
+                                <div class="icon <?php print $term->slug; ?> active" id="<?php echo $term->slug; ?>" data-toggle="tooltip" data-placement="bottom" title="<?php print $term->name; ?>" data-container="body">
                                     <?php include('svg/icon_' . $term->slug . '.php'); ?>
                                 </div>
                         <?php endforeach; endif; ?>

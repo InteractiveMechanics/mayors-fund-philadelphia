@@ -7,10 +7,10 @@
                 <h1><?php the_title(); ?></h1>
             </div>
             <article>
-                <?php the_content(); ?>
                 <?php if(get_field('news_link')): ?>
                     <div class="source">(Source: <a href="<?php the_field('news_link'); ?>" target="_blank"><?php the_field('news_link'); ?></a>).</div>
                 <?php endif; ?>
+                <?php the_content(); ?>
             </article>
         <?php endwhile; endif; ?>
     </div>

@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
     <section class="hero homepage">
+        <a class="scroll-down" href="#priorities">&#8594;</a>
         <div class="hero-mission-statement">
             <div class="container">
                 <h1><?php the_field('mission_statement'); ?></h1>
@@ -27,25 +28,7 @@
             <?php endwhile; endif; ?>
         </div>
     </section>
-    <section class="middle">
-        <div role="tabpanel">
-            <div class="container text-center">
-                <ul class="nav nav-pills" role="tablist">
-                    <li role="presentation" class="active"><a href="#our-mayor" aria-controls="our-mayor" role="tab" data-toggle="tab">Our Mayor</a></li>
-                    <li role="presentation"><a href="#our-city" aria-controls="our-city" role="tab" data-toggle="tab">Our City</a></li>
-                    <li role="presentation"><a href="#our-programs" aria-controls="our-programs" role="tab" data-toggle="tab">Our Programs</a></li>
-                    <li role="presentation"><a href="#our-impact" aria-controls="our-impact" role="tab" data-toggle="tab">Our Impact</a></li>
-                </ul>
-            </div>
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="our-mayor"><?php include('includes/inc-our-mayor.php'); ?></div>
-                <div role="tabpanel" class="tab-pane fade" id="our-city"><?php include('includes/inc-our-city.php'); ?></div>
-                <div role="tabpanel" class="tab-pane fade" id="our-programs"><?php include('includes/inc-our-programs.php'); ?></div>
-                <div role="tabpanel" class="tab-pane fade" id="our-impact"><?php include('includes/inc-our-impact.php'); ?></div>
-            </div>
-        </div>
-    </section>
-    <section class="priorities">
+    <section id="priorities" class="priorities">
         <div class="container">
             <div class="col-sm-4">
                 <?php if( have_rows('priorities_section') ): while ( have_rows('priorities_section') ): the_row(); ?>
@@ -67,6 +50,24 @@
                         </a>
                     </div>
             <?php endforeach; endif; ?>
+        </div>
+    </section>
+    <section class="middle">
+        <div role="tabpanel">
+            <div class="container text-center">
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" class="active"><a href="#our-city" aria-controls="our-city" role="tab" data-toggle="tab">Our City</a></li>
+                    <li role="presentation"><a href="#our-mayor" aria-controls="our-mayor" role="tab" data-toggle="tab">Our Mayor</a></li>
+                    <li role="presentation" class="hidden"><a href="#our-programs" aria-controls="our-programs" role="tab" data-toggle="tab">Our Programs</a></li>
+                    <li role="presentation" class="hidden"><a href="#our-impact" aria-controls="our-impact" role="tab" data-toggle="tab">Our Impact</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="our-city"><?php include('includes/inc-our-city.php'); ?></div>
+                <div role="tabpanel" class="tab-pane fade" id="our-mayor"><?php include('includes/inc-our-mayor.php'); ?></div>
+                <div role="tabpanel" class="tab-pane fade" id="our-programs"><?php include('includes/inc-our-programs.php'); ?></div>
+                <div role="tabpanel" class="tab-pane fade" id="our-impact"><?php include('includes/inc-our-impact.php'); ?></div>
+            </div>
         </div>
     </section>
 <?php endwhile; endif; ?>

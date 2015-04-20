@@ -4,6 +4,7 @@
         <?php $hero = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullsize' ); ?>
         <?php if ( $hero ): ?>
             <section class="hero" style="background: url('<?php echo $hero[0]; ?>')">
+                <div class="overlay"></div>
         		<div class="container">
         			<?php get_template_part('includes/inc-title'); ?>
         		</div>

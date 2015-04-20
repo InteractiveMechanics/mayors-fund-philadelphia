@@ -2,7 +2,7 @@
     global $post;
     $slug = get_post( $post )->post_name;
 
-    //if ( $slug === 'about' ){ wp_redirect( get_permalink(46) ); exit; }
+    if ( $slug === 'about' ){ wp_redirect( get_permalink(46) ); exit; }
 
     function detectmobile(){
         $agent = $_SERVER['HTTP_USER_AGENT'];
@@ -39,6 +39,18 @@
     <title><?php wp_title( '-', true, 'right' ); ?></title>
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/apple-touch-icon-180x180.png" />
+	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/64_favicon.png" sizes="64x64" />
+	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/css/images/icons/32_favicon.png" sizes="32x32" />
 
     <link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -85,4 +97,4 @@
         </nav>
     </div>
 </header>
-<main>
+<main <?php if (is_front_page()){ echo "class='homepage-main'"; } ?>>

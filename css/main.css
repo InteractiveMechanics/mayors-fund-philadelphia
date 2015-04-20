@@ -24,7 +24,7 @@ h3 {
 
 h4 {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Source Sans Pro", Arial, sans-serif; }
 
 h5 {
@@ -33,17 +33,20 @@ h5 {
   font-family: "Source Sans Pro", Arial, sans-serif;
   text-transform: uppercase; }
 
-p {
+p, li {
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.6; }
-  p.lead {
+  p.lead, li.lead {
     font-weight: 300; }
 
 a, a:hover, a:focus, a:active {
   outline: none;
   text-decoration: none; }
+
+.btn, .btn:focus, .btn:hover, .btn:active {
+  outline: none; }
 
 .spotlight {
   background-color: #f1f2f2;
@@ -70,6 +73,8 @@ body {
 
 main {
   padding: 80px 0; }
+  main.homepage-main {
+    padding-bottom: 0; }
 
 img {
   max-width: 100%;
@@ -137,6 +142,11 @@ img + figcaption {
     width: 100%; }
 #support .modal-header {
   padding: 15px 25px; }
+#support .close {
+  margin-top: -8px;
+  padding: 8px 12px;
+  margin-right: -14px;
+  font-size: 30px; }
 
 header {
   background-color: #ffffff;
@@ -179,7 +189,8 @@ header {
       color: black;
       font-family: "Merriweather", Georgia, serif;
       position: relative;
-      transition: all 0.5s; }
+      transition: all 0.5s;
+      font-size: 14px; }
       header .navbar .navbar-nav li > a:after {
         content: "";
         border-bottom: 2px solid transparent;
@@ -264,6 +275,10 @@ header {
     header .above-nav .supporter {
       display: inline;
       margin-left: 20px; }
+      header .above-nav .supporter a {
+        color: #EB5846; }
+        header .above-nav .supporter a:hover {
+          color: #e52f19; }
   header .fa-angle-down {
     float: right; }
   @media screen and (max-width: 767px) {
@@ -384,12 +399,15 @@ footer {
 .profile aside {
   background-color: white;
   padding: 30px 30px 0; }
-  .profile aside a:not(.btn) {
+  .profile aside a:not(.btn):not(.icon-container) {
     font-size: 14px;
     font-weight: 700;
     color: #035A96;
-    text-decoration: underline; }
-    .profile aside a:not(.btn):hover {
+    text-decoration: underline;
+    display: block;
+    line-height: 1.2;
+    word-break: break-word; }
+    .profile aside a:not(.btn):not(.icon-container):hover {
       color: #023c64; }
   .profile aside h3 {
     font-size: 16px;
@@ -419,6 +437,30 @@ footer {
       padding-top: 0; }
     .profile aside .sidebar-section:last-of-type {
       border: none; }
+  .profile aside .video-img {
+    position: relative; }
+    .profile aside .video-img:hover .glyphicon {
+      opacity: 1; }
+    .profile aside .video-img:hover .overlay {
+      background: rgba(0, 0, 0, 0.35); }
+    .profile aside .video-img .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.2);
+      transition: all 0.5s; }
+    .profile aside .video-img .glyphicon {
+      position: absolute;
+      top: 50%;
+      margin-top: -20px;
+      font-size: 42px;
+      text-align: center;
+      width: 100%;
+      color: white;
+      opacity: 0.5;
+      transition: all 0.5s; }
   .profile aside .icon {
     float: none; }
   @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -504,11 +546,15 @@ footer {
       color: #333;
       margin: 0;
       line-height: 1.3; }
-.profile .sponsor {
-  margin-bottom: 12px;
-  display: block; }
-  .profile .sponsor:last-of-type {
+.profile .sponsor, .profile .partner {
+  margin-bottom: 15px;
+  display: block;
+  text-align: center; }
+  .profile .sponsor:last-of-type, .profile .partner:last-of-type {
     margin: 0; }
+  .profile .sponsor img, .profile .partner img {
+    max-height: 85px;
+    max-width: 200px; }
 
 .hero.homepage {
   overflow: hidden;
@@ -536,6 +582,31 @@ footer {
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.35), 0 0 15px rgba(0, 0, 0, 0.15);
     line-height: 1.4;
     width: 85%; }
+  .hero.homepage .scroll-down {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    text-align: center;
+    display: block;
+    color: white;
+    font-size: 27px;
+    font-family: Arial;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -30px;
+    padding-top: 7px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 999px;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: all 0.5s;
+    z-index: 10; }
+    .hero.homepage .scroll-down:hover {
+      opacity: 1;
+      bottom: 35px; }
   .hero.homepage .hero-mission-statement {
     position: absolute;
     width: 100%;
@@ -590,11 +661,13 @@ footer {
 
 .middle {
   background-color: white;
-  margin-bottom: 100px;
-  height: 650px; }
+  height: 700px;
+  position: relative; }
   .middle .nav.nav-pills {
     margin-top: 60px;
     margin-bottom: 25px;
+    position: relative;
+    z-index: 9;
     display: inline-block; }
     .middle .nav.nav-pills > li {
       margin: 0 6px; }
@@ -604,6 +677,7 @@ footer {
         font-weight: 700;
         font-size: 16px;
         border: 2px solid #c9cdcd;
+        background: white;
         color: #c9cdcd;
         transition: all 0.5s; }
         .middle .nav.nav-pills > li > a:hover {
@@ -613,7 +687,13 @@ footer {
       .middle .nav.nav-pills > li.active a, .middle .nav.nav-pills > li.active a:hover {
         border: 2px solid #035A96;
         color: #035A96;
-        background: none; }
+        background: white; }
+  .middle .tab-pane {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 140px; }
   .middle #our-mayor blockquote {
     border-left: none;
     margin-left: -30px;
@@ -632,6 +712,14 @@ footer {
       color: rgba(255, 255, 255, 0.75);
       font-style: italic;
       background: none; }
+  .middle #our-city {
+    background: url("images/homepage_city@2x.jpg");
+    background-size: cover; }
+    .middle #our-city h3 {
+      line-height: 36px;
+      font-weight: 300; }
+    .middle #our-city a {
+      text-align: left; }
 
 .priorities {
   margin-top: 100px; }
@@ -747,7 +835,7 @@ footer {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
   .initiatives .initiative-summary .image {
     z-index: 1;
-    width: 555px;
+    max-width: 555px;
     height: 225px;
     overflow: hidden;
     background: #808080;
@@ -795,7 +883,9 @@ footer {
 
 .page .hero {
   margin-bottom: 80px;
-  margin-top: -80px; }
+  margin-top: -80px;
+  position: relative;
+  height: 500px; }
   .page .hero h1 {
     color: #fff;
     font-family: "Merriweather", Georgia, serif;
@@ -803,8 +893,19 @@ footer {
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.35); }
   .page .hero h5 {
     color: #ffffff;
-    margin-top: 400px;
+    margin-top: 300px;
     font-size: 20px; }
+.page .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2); }
+.page h3 {
+  margin: 25px 0 10px; }
+.page h4 {
+  margin: 25px 0 10px; }
 .page .callout {
   background-color: #fff;
   text-align: center;
@@ -826,7 +927,8 @@ footer {
     font-size: 18px; }
 
 .resources {
-  margin-top: 30px; }
+  margin-top: 20px;
+  margin-bottom: 40px; }
   .resources .resource {
     width: 100%;
     border: none;
@@ -894,7 +996,9 @@ footer {
   font-weight: 500;
   line-height: 1.3;
   padding-left: 50px;
-  clear: both; }
+  clear: both;
+  min-height: 44px;
+  display: block; }
   .icon-container > .icon {
     float: left !important;
     margin-right: 16px;
@@ -912,7 +1016,7 @@ footer {
     color: #EB5846; }
 
 .get-involved .block {
-  min-height: 345px;
+  min-height: 365px;
   background-color: #ffffff;
   padding: 30px;
   margin-bottom: 50px;
@@ -1062,7 +1166,7 @@ footer {
     color: #00A258; }
 .single .source {
   color: #808080;
-  margin-top: 15px; }
+  margin-bottom: 15px; }
 
 /* Slider */
 .slick-loading .slick-list {

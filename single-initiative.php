@@ -15,7 +15,7 @@
                         <i class="fa fa-angle-left fa-2x"></i>
                         <div class="overlay">
                             <h4><?php echo $prev->post_title; ?></h4>
-                            <p><?php echo the_field('short_description', $prev->id); ?></p>
+                            <p><?php echo the_field('short_description', $prev->ID); ?></p>
                         </div>
                     </a>
                 <?php endif; ?>
@@ -24,7 +24,7 @@
                         <i class="fa fa-angle-right fa-2x"></i>
                         <div class="overlay">
                             <h4><?php echo $next->post_title; ?></h4>
-                            <p><?php echo the_field('short_description', $next->id); ?></p>
+                            <p><?php echo the_field('short_description', $next->ID); ?></p>
                         </div>
                     </a>
                 <?php endif; ?>
@@ -49,13 +49,18 @@
         		</div>
     			<div class="col-sm-4 col-md-3 col-md-offset-1">
     			    <aside>
-                        <div class="sidebar-section">
-                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#support"><i class="fa fa-heart"></i> Support this project</a>
-                        </div>
+                        <?php if( get_field('show_support_button') ): ?>
+                            <div class="sidebar-section">
+                                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#support"><i class="fa fa-heart"></i> Support this project</a>
+                            </div>
+                        <?php endif; ?>
                         <?php if( have_rows('video') ): ?>
                             <div class="sidebar-section">
+                                <h3>Videos & Media</h3>
                                 <?php while ( have_rows('video') ): the_row(); ?>
-                                    <a href="<?php the_sub_field('url'); ?>" target="_blank">
+                                    <a href="<?php the_sub_field('url'); ?>" target="_blank" class="video-img">
+                                        <div class="overlay"></div>
+                                        <span class="glyphicon glyphicon-facetime-video"></span>
                                         <img src="<?php the_sub_field('image'); ?>" />
                                     </a>
                                 <?php endwhile; ?>
@@ -69,10 +74,10 @@
                                 <div class="sidebar-section">
                                     <h3>Priority Areas</h3>
                                 	<?php foreach ( $terms as $term ): ?>
-                                        <div class="icon-container <?php print $term->slug; ?>">
+                                        <a class="icon-container <?php print $term->slug; ?>" href="<?php echo get_post_type_archive_link('initiative'); ?>?priority=<?php echo $term->slug; ?>">
                                     		<div class="icon <?php print $term->slug; ?>"><?php include('svg/icon_' . $term->slug . '.php'); ?></div>
                                             <?php print $term->name; ?>
-                                        </div>
+                                        </a>
                                     <?php endforeach; ?>
                                 </div>
                         <?php endif; ?>
@@ -91,6 +96,16 @@
                             <div class="sidebar-section">
                                 <h3>Sponsors</h3>
                                 <?php while ( have_rows('sponsors') ): the_row(); ?>
+                                    <a href="<?php the_sub_field('url'); ?>" target="_blank" class="sponsor">
+                                        <img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>" title="<?php the_sub_field('title'); ?>" />
+                                    </a>
+                                <?php endwhile; ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if( have_rows('partners') ): ?>
+                            <div class="sidebar-section">
+                                <h3>Partners</h3>
+                                <?php while ( have_rows('partners') ): the_row(); ?>
                                     <a href="<?php the_sub_field('url'); ?>" target="_blank" class="sponsor">
                                         <img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>" title="<?php the_sub_field('title'); ?>" />
                                     </a>

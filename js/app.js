@@ -35,6 +35,11 @@ $(function(){
         }
     });
 
+    $('#support').on('shown.bs.modal', function () {
+        var title = $('.page-header h1').text();
+        $('#program-list').selectpicker('val', title);
+    });
+
     if( $('#priority-querystring').val() != null ){
         var priority = $('#priority-querystring').val();
         console.log(priority);
@@ -61,6 +66,20 @@ $(function(){
         arrows: false
     });
 
+    $('a[href*=#]:not([href=#]):not([data-toggle])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+
+    $('[data-toggle="tooltip"]').tooltip();
     $('#program-list').selectpicker();
-    $('#program-list').selectpicker('setStyle', 'input-lg', 'add')
+    $('#program-list').selectpicker('setStyle', 'input-lg', 'add');
 });

@@ -2,6 +2,8 @@
 	.hero {
 		margin-bottom: 80px;
         margin-top: -80px;
+        position: relative;
+        height: 500px;
 
 		h1 {
     		color: #fff;
@@ -9,14 +11,24 @@
     		font-size: 48px;
     		text-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
 		}
-
 		h5 {
     		color: #ffffff;
-            margin-top: 400px;
+            margin-top: 300px;
             font-size: 20px;
 		}
 
 	}
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.2);
+    }
+    
+    h3 { margin: 25px 0 10px; }
+    h4 { margin: 25px 0 10px; }
 
 	.callout {
 		background-color: #fff;

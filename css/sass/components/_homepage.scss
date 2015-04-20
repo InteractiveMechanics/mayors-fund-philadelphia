@@ -29,6 +29,34 @@
         width: 85%;
     }
     
+    .scroll-down {
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        text-align: center;
+        display: block;
+        color: white;
+        font-size: 27px;
+        font-family: Arial;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        margin-left: -30px;
+        padding-top: 7px;
+        width: 60px;
+        height: 60px;
+        border: 2px solid white;
+        border-radius: 999px;
+        text-decoration: none;
+        opacity: 0.75;
+        transition: $slow-trans;
+        z-index: 10;
+
+        &:hover {
+            opacity: 1;
+            bottom: 35px;
+        }
+    }
     .hero-mission-statement { 
         position: absolute; 
         width: 100%;
@@ -95,13 +123,15 @@
 
 .middle {
 	background-color: white;
-	margin-bottom: 100px;
-    height: 650px;
+    height: 700px;
+    position: relative;
 
     .nav {
         &.nav-pills {
     		margin-top: 60px;
     		margin-bottom: 25px;
+            position: relative;
+            z-index: 9;
     		display: inline-block;
     
             > li { 
@@ -113,6 +143,7 @@
                     font-weight: 700;
                     font-size: 16px;
                     border: 2px solid darken($lightgray, 15%);
+                    background: white;
                     color: darken($lightgray, 15%);
                     transition: $slow-trans;
 
@@ -126,10 +157,17 @@
                 &.active a, &.active a:hover {
                     border: 2px solid $blue;
                     color: $blue;
-                    background: none;
+                    background: white;
                 }
         	}
         }
+    }
+    .tab-pane { 
+        position: absolute; 
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        padding-top: 140px;
     }
 
 	#our-mayor {
@@ -155,6 +193,13 @@
                 background: none;
     		}
     	}
+    }
+    #our-city {
+        background: url('images/homepage_city@2x.jpg');
+        background-size: cover;
+
+        h3 { line-height: 36px; font-weight: 300; }
+        a { text-align: left; }
     }
 }
 

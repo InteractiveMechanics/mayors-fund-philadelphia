@@ -28,7 +28,7 @@ h3 {
 
 h4 {
 	font-size: 24px;
-	font-weight: 400;
+	font-weight: 300;
 	font-family: $secondary-font;
 }
 
@@ -39,7 +39,7 @@ h5 {
 	text-transform: uppercase;
 }
 
-p {
+p, li {
 	font-family: $secondary-font;
 	font-size: 18px;
     font-weight: 300;
@@ -53,4 +53,7 @@ p {
 a, a:hover, a:focus, a:active {
     outline: none;
     text-decoration: none;
+}
+.btn, .btn:focus, .btn:hover, .btn:active {
+    outline: none;
 }

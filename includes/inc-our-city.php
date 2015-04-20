@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-sm-8">
             <h3><?php the_field('our_city_description'); ?></h3>
-            <a href="<?php the_field('our_city_link'); ?>">See how we help Philadelphia &raquo;</a>
+            <a href="<?php the_field('our_city_link'); ?>" class="view-more">See how we help Philadelphia &raquo;</a>
         </div>
     </div>
 </div>

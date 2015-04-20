@@ -41,7 +41,7 @@
 
 		.image {
             z-index: 1;
-			width: 555px;
+			max-width: 555px;
 			height: 225px;
             overflow: hidden;
             background: $grey;
