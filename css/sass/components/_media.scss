@@ -33,8 +33,14 @@
 		}
 		p {
 			margin: 0;
-
             a { margin-left: 10px; }
+
+            @media screen and #{$screen-md} {
+                font-size: 16px;
+            }
+            @media screen and #{$screen-xs} {
+                font-size: 14px;
+            }
 		}
 		img {
             margin: -30px -30px 10px 30px;
@@ -48,6 +54,12 @@
 	}
 
     #twitter-feed {
+        .tweet {
+            @media screen and #{$screen-md} {
+                font-size: 16px;
+            }
+        }
+
     	+ a {
     		font-family: $secondary-font;
     		font-size: 16px;

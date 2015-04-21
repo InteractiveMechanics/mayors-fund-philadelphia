@@ -4,11 +4,11 @@
     <div class="container">
         <div class="page-header">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-sm-12 col-md-8">
                     <h5>Our Initiatives</h5>
                     <h1>Initiatives &amp; Programs</h1>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-md-4 hidden-sm hidden-xs">
                     <div class="filters">
                         <p class="filter">Filter by Priority</p>
                         <?php

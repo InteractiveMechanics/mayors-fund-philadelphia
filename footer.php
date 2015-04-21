@@ -7,7 +7,7 @@
                     <p>The Mayor's Fund for Philadelphia is an independent nonprofit that seeks to improve the quality of life for all Philadelphians.</p>
                 </div>
                 <div class="visible-xs divider"></div>
-                <div class="col-sm-8 col-md-6 col-md-offset-1">
+                <div class="col-sm-8 col-md-8 col-lg-6 col-lg-offset-1">
                     <h4>Sign up for our newsletter</h4>
                     <div class="row">
                         <div class="col-sm-12">
@@ -26,13 +26,13 @@
                         array( 
                             'theme_location'    => 'secondary', 
                             'container'         => '',
-                            'menu_class'        => 'list-inline'
+                            'menu_class'        => 'list-inline hidden-xs'
                         )
                     ); ?>
                     <small>
-                        Copyright &copy; <?php print date('Y'); ?> The Mayor's Fund for Philadelphia.
+                        Copyright &copy; <?php print date('Y'); ?> The Mayor's Fund<span class="hidden-xs"> for Philadelphia.</span>
                         <a href="#" class="hidden">Copyright information</a>
-                        <a href="tel: 2156860321" class="hidden-xs">(215) 686-0321</a></small>
+                        <a href="tel: 2156860321">(215) 686-0321</a></small>
                 </div>
             </div>
         </div>

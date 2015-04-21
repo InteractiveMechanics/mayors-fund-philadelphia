@@ -42,6 +42,10 @@
             top: -1px;
             position: relative;
             transition: $slow-trans;
+
+            @media screen and #{$screen-xs} {
+                display: none;
+            }
     	}
 	}
 }

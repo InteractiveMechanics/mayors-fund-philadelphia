@@ -38,13 +38,20 @@
 		background-color: white;
 		padding: 30px 30px 0;
 
+        @media screen and #{$screen-sm} {
+            padding: 25px 25px 0;
+        }
+        @media screen and #{$screen-xs} {
+            margin-top: 30px;
+        }
+
 		a:not(.btn):not(.icon-container) {
-			font-size: 14px;
+			font-size: 16px;
 			font-weight: 700;
 			color: $blue;
             text-decoration: underline;
             display: block;
-            line-height: 1.2;
+            line-height: 1.4;
             word-break: break-word;
 
             &:hover {
@@ -57,6 +64,10 @@
             font-weight: 300;
             margin: 0 0 12px;
 			color: $grey;
+
+            @media screen and #{$screen-xs} {
+                font-size: 18px;
+            }
     	}
 		p {
 			font-size: 16px;
@@ -66,11 +77,6 @@
         ul {
             margin: 0 0 0 18px;
             padding: 0;
-
-            @media screen and #{$screen-md} {
-                list-style-type: none;
-                margin-left: -5px;
-            }
 
             > li {
                 padding-left: 6px;
@@ -86,8 +92,9 @@
             &:first-of-type { padding-top: 0; }
             &:last-of-type { border: none; }
 
-            @media screen and #{$screen-md} {
-                //text-align: center;
+            @media screen and #{$screen-sm} {
+                margin: 0 -25px;
+                padding: 25px;
             }
     	}
 
@@ -125,12 +132,6 @@
             float: none;
         }
 
-        .icon-container {
-            @media screen and #{$screen-md} {
-                padding-left: 40px;
-            }
-        }
-
     	.btn {
     		color: $donate;
     		border: 2px solid $donate;
@@ -148,7 +149,7 @@
     		}
 
             @media screen and #{$screen-md} {
-                font-size: 12px;
+                font-size: 16px;
             }
 
             @media screen and #{$screen-sm} {
@@ -158,6 +159,7 @@
 	}
 
 	.arrow {
+        display: none;
 		position: absolute;
 		top: 32px;
 		height: 40px;
@@ -169,6 +171,10 @@
  		color: darken($lightgray, 15%);
   		border: 2px solid transparent;
         transition: $slow-trans;
+
+        @media screen and #{$screen-lg} {
+            display: block;
+        }
 
   		&:hover {
   			border: 2px solid $blue;

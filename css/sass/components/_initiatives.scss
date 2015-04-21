@@ -35,6 +35,10 @@
         transition: $slow-trans;
         padding: 0 25px;
 
+        @media screen and #{$screen-sm}, #{$screen-xs} {
+            height: 385px;
+        }
+
         &:hover {
             box-shadow: 0 0 20px rgba(0,0,0,0.15);
         }
@@ -48,6 +52,10 @@
             margin: 0 -25px;
             background-size: cover;
 
+            @media screen and #{$screen-sm}, #{$screen-xs} {
+                height: 200px;
+            }
+
             img {
                 width: 100%;
             }
@@ -57,16 +65,21 @@
             margin: 0;
 			font-weight: 300;
             color: black;
+
+            @media screen and #{$screen-sm} {
+                font-size: 21px;
+            }
 		}
 		p {
 			padding: 0 0 25px;
             margin: 0;
 			font-weight: 300;
-            height: 24px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
             color: #333333;
+
+            @media screen and #{$screen-sm}, #{$screen-xs} {
+                font-size: 16px;
+                line-height: 1.4;
+            }
 		}
 
 		.icon {

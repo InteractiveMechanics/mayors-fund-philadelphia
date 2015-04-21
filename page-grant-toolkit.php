@@ -6,7 +6,7 @@
                 <div class="col-sm-12">
                     <?php get_template_part('includes/inc-title'); ?>
                 </div>
-                <div class="col-sm-8 col-md-9">
+                <div class="col-sm-12 col-md-8">
                     <?php get_template_part('includes/inc-content'); ?>
                     <?php if( have_rows('grant_toolkit') ): ?>
                         <h3>Grant Toolkit</h3>
@@ -33,7 +33,7 @@
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="col-sm-4 col-md-3">
+                <div class="col-md-4 col-lg-3 col-lg-offset-1 hidden-sm hidden-xs">
                     <?php if( have_rows('callout_box') ): ?>
                         <?php while ( have_rows('callout_box') ): the_row(); ?>
                             <div class="callout">

@@ -2,6 +2,10 @@ header {
 	background-color: $header_background;
     max-height: 100px;
 
+    @media screen and #{$screen-xs} {
+        max-height: 70px;
+    }
+
 	.navbar {
 		background: none;
 		border: none;
@@ -11,6 +15,12 @@ header {
     
     	.navbar-toggle {
     		border-color: transparent;
+
+            @media screen and #{$screen-xs} {
+                padding: 22px 5px;
+                margin: 0;
+                height: 70px;
+            }
     
     		> .icon-bar {
     			background-color: #035a96;
@@ -28,11 +38,29 @@ header {
             position: relative;
             top: -34px;
             transition: $slow-trans;
+            height: 70px;
 
             &:hover {
                 opacity: 0.65;
             }
+        
+            @media screen and #{$screen-xs} {
+                top: -4px;
+                left: -30px;
 
+                svg { height: 50px; }
+            }
+        }
+
+        .navbar-collapse {
+            @media screen and #{$screen-xs} {
+                left: 0;
+                position: absolute;
+                right: 0;
+                padding: 0;
+                margin: 0 -15px;
+                z-index: 20;
+            }
         }
 
 		.navbar-nav {
@@ -44,6 +72,7 @@ header {
 
 			@media screen and #{$screen-xs} {
 				text-align: center;
+                margin: -1px 0 0;
 			}
 
 			li {
@@ -59,6 +88,7 @@ header {
                     position: relative;
                     transition: $slow-trans;
                     font-size: 14px;
+                    
 
                     &:after {
                         content: "";
@@ -73,6 +103,16 @@ header {
     					@media screen and #{$screen-xs} {
     						display: none;
     					}   
+                    }
+                    
+                    @media screen and #{$screen-sm} {
+                        font-size: 13px;
+                        padding-left: 12px;
+                        padding-right: 12px;
+                    }
+                    @media screen and #{$screen-xs} {
+                        padding-top: 15px;
+                        padding-bottom: 15px;
                     }
 
                     &:hover {
@@ -130,6 +170,9 @@ header {
 
 			@media screen and #{$screen-xs} {
 				text-align: center;
+                border-bottom: none !important;
+                border-top: 1px solid darken($lightgray, 10%) !important;
+                background: $lightgray !important;
 			}
 		}
 
@@ -151,6 +194,10 @@ header {
                         &:after {
                             content: none;
                         }
+                    }
+
+                    @media screen and #{$screen-xs} {
+                        padding: 15px 15px 15px 25px !important;
                     }
                 }
 

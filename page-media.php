@@ -6,7 +6,7 @@
 			<h1>Media, Press & Partner News</h1>
 		</div>
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-12 col-md-8">
                 <h3>Press &amp; News</h3>
 
                 <?php $the_query = new WP_Query( array( 'post_type' => 'post', 'paged' => true ) ); ?>
@@ -26,7 +26,7 @@
                     </ul>
                 <?php endif;  wp_reset_postdata();?>
             </div>
-            <div class="col-sm-4 hidden-xs">
+            <div class="col-sm-12 col-md-4">
                 <div class="twitter">
                     <h3><i class="fa fa-twitter fa-lg"></i>@MayorsFundPhila</h3>
                     <div id="twitter-feed"></div>

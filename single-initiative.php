@@ -30,7 +30,7 @@
                 <?php endif; ?>
     		</div>
         	<div class="row">
-        		<div class="col-sm-8 col-md-8">
+        		<div class="col-sm-8">
         			<article>
                         <?php if (has_post_thumbnail()): ?>
                             <figure>
@@ -47,7 +47,7 @@
         				<?php the_content(); ?>
         			</article>
         		</div>
-    			<div class="col-sm-4 col-md-3 col-md-offset-1">
+    			<div class="col-sm-4 col-lg-3 col-lg-offset-1">
     			    <aside>
                         <?php if( get_field('show_support_button') ): ?>
                             <div class="sidebar-section">

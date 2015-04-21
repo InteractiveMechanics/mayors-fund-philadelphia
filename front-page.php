@@ -9,8 +9,7 @@
         </div>
         <div class="slideshow">
             <?php if( have_rows('hero_slideshow') ): while ( have_rows('hero_slideshow') ): the_row(); ?>
-                <div class="slideshow-slide">
-                    <img src="<?php the_sub_field('image'); ?>" />
+                <div class="slideshow-slide" style="background-image: url('<?php the_sub_field('image'); ?>');" />
                     <div class="overlay"></div>
 
                     <?php $initiatives = get_sub_field('initiative'); ?>
@@ -30,7 +29,7 @@
     </section>
     <section id="priorities" class="priorities">
         <div class="container">
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4">
                 <?php if( have_rows('priorities_section') ): while ( have_rows('priorities_section') ): the_row(); ?>
                     <h3><?php the_sub_field('title'); ?></h3>
                     <p><?php the_sub_field('description'); ?></p>
@@ -40,7 +39,7 @@
             <?php
                 $terms = get_terms( 'priorities', array('hide_empty' => 0) );
                 if ( !empty( $terms ) && !is_wp_error( $terms ) ): foreach ( $terms as $term ): ?>
-                    <div class="col-sm-4">
+                    <div class="col-sm-6 col-md-4">
                         <a class="priority-block <?php print $term->slug; ?>" href="<?php echo get_post_type_archive_link('initiative'); ?>?priority=<?php echo $term->slug; ?>">
                             <div class="icon <?php print $term->slug; ?>"><?php include('svg/icon_' . $term->slug . '.php'); ?></div>
                             <h3>

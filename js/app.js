@@ -36,7 +36,9 @@ $(function(){
     });
 
     $('#support').on('shown.bs.modal', function () {
-        var title = $('.page-header h1').text();
+        var title = $('.profile .page-header h1').text();
+        if (!title){ title = 'all'; }
+
         $('#program-list').selectpicker('val', title);
     });
 
