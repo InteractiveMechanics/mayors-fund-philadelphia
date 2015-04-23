@@ -35,7 +35,7 @@
                         <?php if (has_post_thumbnail()): ?>
                             <figure>
                                 <?php the_post_thumbnail( 'full' ); ?> 
-                                <figcaption><?php the_post_thumbnail_caption(); ?></figcaption>
+                                <figcaption><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></figcaption>
                             </figure>
                         <?php endif; ?>
                         <?php if( have_rows('blockquote') ): while ( have_rows('blockquote') ): the_row(); ?>

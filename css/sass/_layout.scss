@@ -11,7 +11,7 @@ main {
 }
 
 img { max-width: 100%; height: auto; }
-img + figcaption { font-style: italic; color: $grey; }
+img + figcaption { font-style: italic; color: $grey; margin-top: 6px; text-align: right; }
 
 .page-header {
 	border-bottom: 1px solid transparent;
