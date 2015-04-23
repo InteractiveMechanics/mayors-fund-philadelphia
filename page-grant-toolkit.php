@@ -37,10 +37,10 @@
                     <?php if( have_rows('callout_box') ): ?>
                         <?php while ( have_rows('callout_box') ): the_row(); ?>
                             <div class="callout">
-                                <h6><?php the_sub_field('title'); ?></h6>
+                                <h5><?php the_sub_field('title'); ?></h5>
                                 <p><?php the_sub_field('body'); ?></p>
                             </div>
-                            <a href="<?php the_sub_field('link'); ?>">View <?php the_sub_field('title'); ?> &raquo;</a>
+                            <a href="<?php the_sub_field('link'); ?>" class="view-more">View <?php the_sub_field('title'); ?> &raquo;</a>
                         <?php endwhile; ?>
                     <?php endif; ?>
                 </div>

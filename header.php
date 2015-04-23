@@ -1,8 +1,10 @@
 <?php 
     global $post;
-    $slug = get_post( $post )->post_name;
+    if ($post){
+        $slug = get_post( $post )->post_name;
 
-    if ( $slug === 'about' ){ wp_redirect( get_permalink(46) ); exit; }
+        if ( $slug === 'about' ){ wp_redirect( get_permalink(46) ); exit; }
+    }
 
     function detectmobile(){
         $agent = $_SERVER['HTTP_USER_AGENT'];
@@ -97,4 +99,4 @@
         </nav>
     </div>
 </header>
-<main <?php if (is_front_page()){ echo "class='homepage-main'"; } ?>>
+<main <?php if (is_front_page()){ echo "class='homepage-main'"; } if (is_404()){ echo "class='page-404'"; } ?>>

@@ -2,11 +2,6 @@
     .filters {
         float: right;
 
-        @media screen and #{$screen-xs} {
-            margin-top: 20px;
-            float: left;
-        }
-
     	.filter {
     		color: $grey;
     		font-size: 14px;
@@ -35,8 +30,12 @@
         transition: $slow-trans;
         padding: 0 25px;
 
-        @media screen and #{$screen-sm}, #{$screen-xs} {
+        @media screen and #{$screen-sm} {
             height: 385px;
+        }
+        @media screen and #{$screen-xs} {
+            height: auto;
+            padding-bottom: 10px;
         }
 
         &:hover {
