@@ -65,6 +65,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
+<?php include_once("includes/inc-analytics.php") ?>
 <header>
     <div class="container">
         <div class="above-nav hidden-xs">
