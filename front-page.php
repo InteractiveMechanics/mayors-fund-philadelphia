@@ -33,7 +33,7 @@
                 <?php if( have_rows('priorities_section') ): while ( have_rows('priorities_section') ): the_row(); ?>
                     <h3><?php the_sub_field('title'); ?></h3>
                     <p><?php the_sub_field('description'); ?></p>
-                    <p><a href="<?php echo get_post_type_archive_link('initiative'); ?>">View our project initiatives &raquo;</a></p>
+                    <p><a href="<?php echo get_post_type_archive_link('initiative'); ?>">View our initiatives &raquo;</a></p>
                 <?php endwhile; endif; ?>
             </div>
             <?php

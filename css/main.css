@@ -367,7 +367,7 @@ footer {
     font-weight: 300;
     line-height: 1.6; }
   footer small {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300; }
     footer small a {
       margin-left: 10px;
@@ -375,6 +375,10 @@ footer {
       font-weight: 500;
       text-decoration: underline;
       border-left: 2px solid rgba(255, 255, 255, 0.35); }
+      footer small a:first-of-type {
+        border: none;
+        margin: 0;
+        padding: 0; }
       footer small a:hover {
         text-decoration: underline; }
   footer .brand {

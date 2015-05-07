@@ -30,8 +30,8 @@
                         )
                     ); ?>
                     <small>
-                        Copyright &copy; <?php print date('Y'); ?> The Mayor's Fund<span class="hidden-xs"> for Philadelphia.</span>
-                        <a href="#" class="hidden">Copyright information</a>
+                        Copyright &copy; <?php print date('Y'); ?> The Mayor's Fund for Philadelphia.<br/>
+                        <a href="https://www.google.com/maps/place/Philadelphia+City+Hall/@39.952388,-75.164023,18z" target="_blank">City Hall, Rm 708, Philadelphia, PA 19107</a>
                         <a href="tel: 2156860321">(215) 686-0321</a></small>
                 </div>
             </div>
