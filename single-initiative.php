@@ -87,7 +87,11 @@
                                 <h3>Contact Information</h3>
             				    <ul>
                                     <?php while ( have_rows('contact_info') ): the_row(); ?>
-                                        <li><a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a></li>
+                                        <?php if (get_sub_field('url')): ?>
+                                            <li><a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('title'); ?></a></li>
+                                        <?php else : ?>
+                                            <li><?php the_sub_field('title'); ?></li>
+                                        <?php endif; ?>
                                     <?php endwhile; ?>
             				    </ul>
                             </div>
