@@ -635,7 +635,8 @@ footer {
   overflow: hidden;
   margin-top: -80px;
   height: 650px;
-  position: relative; }
+  position: relative;
+  width: 100%; }
   @media screen and (max-width: 767px) {
     .hero.homepage {
       height: 550px; } }

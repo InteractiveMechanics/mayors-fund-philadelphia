@@ -53,13 +53,16 @@
                                 <div class="form-group col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                                     <label for="program-list">Program</label>
                                     <?php 
-                                        $args = array( 'posts_per_page' => 0, 'post_type' => 'initiative' );
+                                        $args = array( 
+                                            'posts_per_page' => 0, 
+                                            'post_type' => 'initiative'
+                                        );
                                         $initiatives = get_posts($args);
                                     ?>
                                     <select name="itemName" id="program-list">
                                         <option value="all">Most Urgent Need</option>
                                         <?php foreach ( $initiatives as $post ) : setup_postdata( $post ); ?>
-                                            <?php if( get_field('show_support_button') ): ?>
+                                            <?php if( get_field('show_support_button') && !get_field('is_hidden') ): ?>
                                                 <option value="<?php the_title(); ?>"><?php the_title(); ?></option>
                                             <?php endif; ?>
                                         <?php endforeach; wp_reset_postdata(); ?>

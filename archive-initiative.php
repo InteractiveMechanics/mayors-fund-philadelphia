@@ -12,7 +12,7 @@
                     <div class="filters">
                         <p class="filter">Filter by Priority</p>
                         <?php
-                            $terms = get_terms( 'priorities', array('hide_empty' => 0) );
+                            $terms = get_terms( 'priorities', array('hide_empty' => 0, 'has_password' => false) );
                             if ( !empty( $terms ) && !is_wp_error( $terms ) ): foreach ( $terms as $term ): ?>
                                 <div class="icon <?php print $term->slug; ?> active" id="<?php echo $term->slug; ?>" data-toggle="tooltip" data-placement="bottom" title="<?php print $term->name; ?>" data-container="body">
                                     <?php include('svg/icon_' . $term->slug . '.php'); ?>
@@ -25,6 +25,7 @@
         <div class="row">
             <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
                 <?php $terms = get_the_terms( $post->ID, 'priorities' ); ?>
+                <?php if (!get_field('is_hidden')): ?>
                 <div class="col-sm-6">
                     <a href="<?php the_permalink(); ?>" class="initiative-summary" data-priorities="<?php foreach ( $terms as $term ){ echo $term->slug . ' '; } ?>">
                        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'fullsize' ); ?>
@@ -36,6 +37,7 @@
                         <p><?php the_field('short_description'); ?></p>
                     </a>
                 </div>
+                <?php endif; ?>
             <?php endwhile; endif; ?>
         </div>
         <div class="row hidden">
