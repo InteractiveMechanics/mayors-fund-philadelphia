@@ -76,6 +76,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+                        <input type='hidden' name='loginString' value='6Ew9e7N9' />
                         <input type="submit" type="submit" class="btn btn-primary" value="Complete My Donation">
                     </div>
                 </form>
