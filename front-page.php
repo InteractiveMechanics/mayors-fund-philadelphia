@@ -55,17 +55,18 @@
         <div role="tabpanel">
             <div class="container text-center">
                 <ul class="nav nav-pills" role="tablist">
-                    <li role="presentation" class="active"><a href="#our-city" aria-controls="our-city" role="tab" data-toggle="tab">Our City</a></li>
-                    <li role="presentation"><a href="#our-mayor" aria-controls="our-mayor" role="tab" data-toggle="tab">Our Mayor</a></li>
-                    <li role="presentation" class="hidden"><a href="#our-programs" aria-controls="our-programs" role="tab" data-toggle="tab">Our Programs</a></li>
-                    <li role="presentation" class="hidden"><a href="#our-impact" aria-controls="our-impact" role="tab" data-toggle="tab">Our Impact</a></li>
+                    <?php if(get_field('our_city_show')): ?>
+                        <li role="presentation" class="active"><a href="#our-city" aria-controls="our-city" role="tab" data-toggle="tab">Our City</a></li><?php endif; ?>
+                    <?php if(get_field('our_mayor_show')): ?>
+                        <li role="presentation"><a href="#our-mayor" aria-controls="our-mayor" role="tab" data-toggle="tab">Our Mayor</a></li><?php endif; ?>
+                    <?php if(get_field('our_impact_show')): ?>
+                        <li role="presentation"><a href="#our-impact" aria-controls="our-impact" role="tab" data-toggle="tab">Our Impact</a></li><?php endif; ?>
                 </ul>
             </div>
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="our-city"><?php include('includes/inc-our-city.php'); ?></div>
-                <div role="tabpanel" class="tab-pane fade" id="our-mayor"><?php include('includes/inc-our-mayor.php'); ?></div>
-                <div role="tabpanel" class="tab-pane fade" id="our-programs"><?php include('includes/inc-our-programs.php'); ?></div>
-                <div role="tabpanel" class="tab-pane fade" id="our-impact"><?php include('includes/inc-our-impact.php'); ?></div>
+                <?php if(get_field('our_city_show')): ?><div role="tabpanel" class="tab-pane fade in active" id="our-city"><?php include('includes/inc-our-city.php'); ?></div><?php endif; ?>
+                <?php if(get_field('our_mayor_show')): ?><div role="tabpanel" class="tab-pane fade" id="our-mayor"><?php include('includes/inc-our-mayor.php'); ?></div><?php endif; ?>
+                <?php if(get_field('our_impact_show')): ?><div role="tabpanel" class="tab-pane fade" id="our-impact"><?php include('includes/inc-our-impact.php'); ?></div><?php endif; ?>
             </div>
         </div>
     </section>
