@@ -54,12 +54,12 @@
                                     <label for="program-list">Program</label>
                                     <?php 
                                         $args = array( 
-                                            'posts_per_page' => 0, 
+                                            'posts_per_page' => 20, 
                                             'post_type' => 'initiative'
                                         );
                                         $initiatives = get_posts($args);
                                     ?>
-                                    <select name="itemName" id="program-list">
+                                    <select name="itemName" id="program-list" data-size="5">
                                         <option value="all">Most Urgent Need</option>
                                         <?php foreach ( $initiatives as $post ) : setup_postdata( $post ); ?>
                                             <?php if( get_field('show_support_button') && !get_field('is_hidden') ): ?>
